@@ -1,0 +1,4 @@
+HAX is working and emulator runs in fast virt mode.
+emulator: WARNING: UpdateCheck: Failure: Error
+emulator: WARNING: UpdateCheck: failed to get the latest version, skipping check (current version '28.0.16-5112988')
+emulator: Saving state on exit with session uptime 229092 ms

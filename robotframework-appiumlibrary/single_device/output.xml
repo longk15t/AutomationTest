@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20181111 21:00:49.610" generator="Robot 3.0.4 (Python 2.7.10 on win32)">
+<suite source="D:\workspace\MyFirstGitRepo\robotframework-appiumlibrary\FirstTestSuite.robot" id="s1" name="FirstTestSuite">
+<kw type="setup" name="Start Appium Server and emulator" library="resource">
+<kw name="Start Process" library="Process">
+<doc>Starts a new process on background.</doc>
+<arguments>
+<arg>${CMD_EXE}</arg>
+<arg>/k</arg>
+<arg>${APPIUM_APP}</arg>
+<arg>&gt;</arg>
+<arg>appium_log.txt</arg>
+<arg>alias=appium_call</arg>
+</arguments>
+<msg timestamp="20181111 21:00:49.779" level="INFO">Starting process:
+C:\WINDOWS\System32\cmd.exe /k "appium -a 127.0.0.1" &gt; appium_log.txt</msg>
+<status status="PASS" endtime="20181111 21:00:49.782" starttime="20181111 21:00:49.779"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>appium_call</arg>
+<arg>timeout=10s</arg>
+</arguments>
+<msg timestamp="20181111 21:00:49.783" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20181111 21:00:59.851" level="INFO">Process did not complete in 10 seconds.</msg>
+<msg timestamp="20181111 21:00:59.851" level="INFO">Leaving process intact.</msg>
+<status status="PASS" endtime="20181111 21:00:59.851" starttime="20181111 21:00:49.782"></status>
+</kw>
+<kw name="Process Should Be Running" library="Process">
+<doc>Verifies that the process is running.</doc>
+<arguments>
+<arg>appium_call</arg>
+</arguments>
+<status status="PASS" endtime="20181111 21:00:59.852" starttime="20181111 21:00:59.851"></status>
+</kw>
+<kw name="Start Process" library="Process">
+<doc>Starts a new process on background.</doc>
+<arguments>
+<arg>${CMD_EXE}</arg>
+<arg>/k</arg>
+<arg>${EMULATOR}</arg>
+<arg>&gt;</arg>
+<arg>emulator_log.txt</arg>
+<arg>alias=emulator_call</arg>
+</arguments>
+<msg timestamp="20181111 21:00:59.852" level="INFO">Starting process:
+C:\WINDOWS\System32\cmd.exe /k "C:\Users\longnhu\AppData\Local\Android\Sdk\emulator\emulator.exe -avd Pixel2" &gt; emulator_log.txt</msg>
+<status status="PASS" endtime="20181111 21:00:59.854" starttime="20181111 21:00:59.852"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>emulator_call</arg>
+<arg>timeout=20s</arg>
+</arguments>
+<msg timestamp="20181111 21:00:59.855" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20181111 21:01:19.900" level="INFO">Process did not complete in 20 seconds.</msg>
+<msg timestamp="20181111 21:01:19.900" level="INFO">Leaving process intact.</msg>
+<status status="PASS" endtime="20181111 21:01:19.900" starttime="20181111 21:00:59.854"></status>
+</kw>
+<kw name="Process Should Be Running" library="Process">
+<doc>Verifies that the process is running.</doc>
+<arguments>
+<arg>emulator_call</arg>
+</arguments>
+<status status="PASS" endtime="20181111 21:01:19.901" starttime="20181111 21:01:19.900"></status>
+</kw>
+<status status="PASS" endtime="20181111 21:01:19.901" starttime="20181111 21:00:49.779"></status>
+</kw>
+<test id="s1-t1" name="Dial a number">
+<kw name="Given user start application Dialer" library="resource">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.</doc>
+<arguments>
+<arg>${APPIUM_SERVER}</arg>
+<arg>platformName=Android</arg>
+<arg>platformVersion=7.0</arg>
+<arg>deviceName=emulator-5554</arg>
+<arg>automationName=uiautomator2</arg>
+<arg>appPackage=com.android.dialer</arg>
+<arg>newCommandTimeout=2500</arg>
+<arg>appActivity=com.android.dialer.DialtactsActivity</arg>
+</arguments>
+<status status="PASS" endtime="20181111 21:01:34.175" starttime="20181111 21:01:19.902"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20181111 21:01:37.176" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20181111 21:01:37.176" starttime="20181111 21:01:34.175"></status>
+</kw>
+<status status="PASS" endtime="20181111 21:01:37.176" starttime="20181111 21:01:19.902"></status>
+</kw>
+<kw name="When user click dialer button" library="resource">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${DIAL_BUTTON}</arg>
+</arguments>
+<msg timestamp="20181111 21:01:37.177" level="INFO">Clicking element 'id=com.android.dialer:id/floating_action_button'.</msg>
+<status status="PASS" endtime="20181111 21:01:37.282" starttime="20181111 21:01:37.177"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20181111 21:01:40.283" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20181111 21:01:40.283" starttime="20181111 21:01:37.282"></status>
+</kw>
+<status status="PASS" endtime="20181111 21:01:40.283" starttime="20181111 21:01:37.176"></status>
+</kw>
+<kw name="Then dial pad shows up" library="resource">
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<doc>Verifies that element identified with locator is visible.</doc>
+<arguments>
+<arg>${DIAL_PAD}</arg>
+</arguments>
+<status status="PASS" endtime="20181111 21:01:40.426" starttime="20181111 21:01:40.284"></status>
+</kw>
+<status status="PASS" endtime="20181111 21:01:40.426" starttime="20181111 21:01:40.283"></status>
+</kw>
+<kw type="teardown" name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" endtime="20181111 21:01:40.957" starttime="20181111 21:01:40.426"></status>
+</kw>
+<status status="PASS" endtime="20181111 21:01:40.958" critical="yes" starttime="20181111 21:01:19.901"></status>
+</test>
+<kw type="teardown" name="Stop Appium Server and emulator" library="resource">
+<kw name="Terminate All Processes" library="Process">
+<doc>Terminates all still running processes started by this library.</doc>
+<msg timestamp="20181111 21:01:40.960" level="INFO">Gracefully terminating process.</msg>
+<msg timestamp="20181111 21:02:11.059" level="INFO">Graceful termination failed.</msg>
+<msg timestamp="20181111 21:02:11.060" level="INFO">Forcefully killing process.</msg>
+<msg timestamp="20181111 21:02:11.160" level="INFO">Process completed.</msg>
+<msg timestamp="20181111 21:02:11.160" level="INFO">Gracefully terminating process.</msg>
+<msg timestamp="20181111 21:02:41.212" level="INFO">Graceful termination failed.</msg>
+<msg timestamp="20181111 21:02:41.212" level="INFO">Forcefully killing process.</msg>
+<msg timestamp="20181111 21:02:41.312" level="INFO">Process completed.</msg>
+<status status="PASS" endtime="20181111 21:02:41.312" starttime="20181111 21:01:40.959"></status>
+</kw>
+<status status="PASS" endtime="20181111 21:02:41.312" starttime="20181111 21:01:40.959"></status>
+</kw>
+<doc>This script starts apps on emulator</doc>
+<status status="PASS" endtime="20181111 21:02:41.312" starttime="20181111 21:00:49.612"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="FirstTestSuite" pass="1">FirstTestSuite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

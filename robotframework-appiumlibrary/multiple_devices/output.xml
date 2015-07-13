@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20181117 16:15:01.252" generator="Robot 3.0.4 (Python 2.7.10 on win32)">
+<suite source="D:\workspace\AutomationTest\robotframework-appiumlibrary\multiple_devices\FirstTestSuite.robot" id="s1" name="FirstTestSuite">
+<kw type="setup" name="Start Appium Server and devices" library="resource">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${\n}INFO: Starting appium server port 4723...</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:15:01.416" starttime="20181117 16:15:01.416"></status>
+</kw>
+<kw name="Start Process" library="Process">
+<doc>Starts a new process on background.</doc>
+<arguments>
+<arg>${CMD_EXE}</arg>
+<arg>/k</arg>
+<arg>${APPIUM_APP1}</arg>
+<arg>&gt;</arg>
+<arg>appium_log1.txt</arg>
+<arg>alias=appium_call1</arg>
+</arguments>
+<msg timestamp="20181117 16:15:01.417" level="INFO">Starting process:
+C:\WINDOWS\System32\cmd.exe /k "appium -a 127.0.0.1 -p 4723" &gt; appium_log1.txt</msg>
+<status status="PASS" endtime="20181117 16:15:01.419" starttime="20181117 16:15:01.416"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${\n}INFO: Starting appium server port 4725...</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:15:01.420" starttime="20181117 16:15:01.419"></status>
+</kw>
+<kw name="Start Process" library="Process">
+<doc>Starts a new process on background.</doc>
+<arguments>
+<arg>${CMD_EXE}</arg>
+<arg>/k</arg>
+<arg>${APPIUM_APP2}</arg>
+<arg>&gt;</arg>
+<arg>appium_log2.txt</arg>
+<arg>alias=appium_call2</arg>
+</arguments>
+<msg timestamp="20181117 16:15:01.421" level="INFO">Starting process:
+C:\WINDOWS\System32\cmd.exe /k "appium -a 127.0.0.1 -p 4725" &gt; appium_log2.txt</msg>
+<status status="PASS" endtime="20181117 16:15:01.423" starttime="20181117 16:15:01.420"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>appium_call1</arg>
+<arg>timeout=5s</arg>
+</arguments>
+<msg timestamp="20181117 16:15:01.423" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20181117 16:15:06.452" level="INFO">Process did not complete in 5 seconds.</msg>
+<msg timestamp="20181117 16:15:06.452" level="INFO">Leaving process intact.</msg>
+<status status="PASS" endtime="20181117 16:15:06.452" starttime="20181117 16:15:01.423"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>appium_call2</arg>
+<arg>timeout=5s</arg>
+</arguments>
+<msg timestamp="20181117 16:15:06.452" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20181117 16:15:11.479" level="INFO">Process did not complete in 5 seconds.</msg>
+<msg timestamp="20181117 16:15:11.479" level="INFO">Leaving process intact.</msg>
+<status status="PASS" endtime="20181117 16:15:11.479" starttime="20181117 16:15:06.452"></status>
+</kw>
+<kw name="Process Should Be Running" library="Process">
+<doc>Verifies that the process is running.</doc>
+<arguments>
+<arg>appium_call1</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:15:11.479" starttime="20181117 16:15:11.479"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${\n}INFO: Started appium server port 4725</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:15:11.480" starttime="20181117 16:15:11.479"></status>
+</kw>
+<kw name="Process Should Be Running" library="Process">
+<doc>Verifies that the process is running.</doc>
+<arguments>
+<arg>appium_call2</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:15:11.480" starttime="20181117 16:15:11.480"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${\n}INFO: Started appium server port 4725</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:15:11.481" starttime="20181117 16:15:11.480"></status>
+</kw>
+<status status="PASS" endtime="20181117 16:15:11.481" starttime="20181117 16:15:01.416"></status>
+</kw>
+<test id="s1-t1" name="both users send text messages">
+<kw type="setup" name="User opens Messages app" library="resource">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${\n}INFO: Open Messages app on device 1</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:15:11.483" starttime="20181117 16:15:11.482"></status>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.</doc>
+<arguments>
+<arg>${APPIUM_SERVER1}</arg>
+<arg>platformName=${PLATFORM_NAME1}</arg>
+<arg>platformVersion=${PLATFORM_VERSION1}</arg>
+<arg>deviceName=${DEVICE_NAME1}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>newCommandTimeout=${COMMAND_TIMEOUT}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+</arguments>
+<assign>
+<var>${user1}</var>
+</assign>
+<msg timestamp="20181117 16:15:29.923" level="INFO">${user1} = 1</msg>
+<status status="PASS" endtime="20181117 16:15:29.923" starttime="20181117 16:15:11.483"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${NEW_CONVERSATION_BUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:15:30.845" starttime="20181117 16:15:29.923"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${user1}</arg>
+</arguments>
+<msg timestamp="20181117 16:15:30.845" level="INFO">${user1} = 1</msg>
+<status status="PASS" endtime="20181117 16:15:30.845" starttime="20181117 16:15:30.845"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${\n}INFO: Open Messages app on device 2</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:15:30.846" starttime="20181117 16:15:30.845"></status>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.</doc>
+<arguments>
+<arg>${APPIUM_SERVER2}</arg>
+<arg>platformName=${PLATFORM_NAME2}</arg>
+<arg>platformVersion=${PLATFORM_VERSION2}</arg>
+<arg>deviceName=${DEVICE_NAME2}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>newCommandTimeout=${COMMAND_TIMEOUT}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+</arguments>
+<assign>
+<var>${user2}</var>
+</assign>
+<msg timestamp="20181117 16:15:48.295" level="INFO">${user2} = 2</msg>
+<status status="PASS" endtime="20181117 16:15:48.295" starttime="20181117 16:15:30.846"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${NEW_CONVERSATION_BUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:15:49.705" starttime="20181117 16:15:48.295"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${user2}</arg>
+</arguments>
+<msg timestamp="20181117 16:15:49.705" level="INFO">${user2} = 2</msg>
+<status status="PASS" endtime="20181117 16:15:49.705" starttime="20181117 16:15:49.705"></status>
+</kw>
+<status status="PASS" endtime="20181117 16:15:49.706" starttime="20181117 16:15:11.482"></status>
+</kw>
+<kw name="Given user1 and user2 want to send text message together" library="resource">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${\n}user1 and user2 want to send text message together</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:15:49.707" starttime="20181117 16:15:49.706"></status>
+</kw>
+<kw name="Switch Application" library="AppiumLibrary">
+<doc>Switches the active application by index or alias.</doc>
+<arguments>
+<arg>${user1}</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:15:49.707" starttime="20181117 16:15:49.707"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${NEW_CONVERSATION_BUTTON}</arg>
+</arguments>
+<msg timestamp="20181117 16:15:49.708" level="INFO">Clicking element 'id=com.google.android.apps.messaging:id/start_new_conversation_button'.</msg>
+<status status="PASS" endtime="20181117 16:15:49.789" starttime="20181117 16:15:49.707"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${TYPE_NUM_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:15:52.306" starttime="20181117 16:15:49.789"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${TYPE_NUM_FIELD}</arg>
+</arguments>
+<msg timestamp="20181117 16:15:52.307" level="INFO">Clicking element 'id=com.google.android.apps.messaging:id/recipient_text_view'.</msg>
+<status status="PASS" endtime="20181117 16:15:52.373" starttime="20181117 16:15:52.306"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${TYPE_NUM_FIELD}</arg>
+<arg>${NUMBER_USER2}</arg>
+</arguments>
+<msg timestamp="20181117 16:15:52.373" level="INFO">Typing text '5555215556' into text field 'id=com.google.android.apps.messaging:id/recipient_text_view'</msg>
+<status status="PASS" endtime="20181117 16:15:53.513" starttime="20181117 16:15:52.373"></status>
+</kw>
+<kw name="Press Keycode" library="AppiumLibrary">
+<doc>Sends a press of keycode to the device.</doc>
+<arguments>
+<arg>66</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:15:54.192" starttime="20181117 16:15:53.514"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${CONVERSATION_SCREEN}</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:15:55.835" starttime="20181117 16:15:54.192"></status>
+</kw>
+<kw name="Switch Application" library="AppiumLibrary">
+<doc>Switches the active application by index or alias.</doc>
+<arguments>
+<arg>${user2}</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:15:55.836" starttime="20181117 16:15:55.835"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${NEW_CONVERSATION_BUTTON}</arg>
+</arguments>
+<msg timestamp="20181117 16:15:55.836" level="INFO">Clicking element 'id=com.google.android.apps.messaging:id/start_new_conversation_button'.</msg>
+<status status="PASS" endtime="20181117 16:15:55.973" starttime="20181117 16:15:55.836"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${TYPE_NUM_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:15:58.852" starttime="20181117 16:15:55.973"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${TYPE_NUM_FIELD}</arg>
+</arguments>
+<msg timestamp="20181117 16:15:58.853" level="INFO">Clicking element 'id=com.google.android.apps.messaging:id/recipient_text_view'.</msg>
+<status status="PASS" endtime="20181117 16:15:58.998" starttime="20181117 16:15:58.853"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${TYPE_NUM_FIELD}</arg>
+<arg>${NUMBER_USER1}</arg>
+</arguments>
+<msg timestamp="20181117 16:15:58.999" level="INFO">Typing text '5555215554' into text field 'id=com.google.android.apps.messaging:id/recipient_text_view'</msg>
+<status status="PASS" endtime="20181117 16:16:00.875" starttime="20181117 16:15:58.998"></status>
+</kw>
+<kw name="Press Keycode" library="AppiumLibrary">
+<doc>Sends a press of keycode to the device.</doc>
+<arguments>
+<arg>66</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:16:01.843" starttime="20181117 16:16:00.875"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${CONVERSATION_SCREEN}</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:16:05.166" starttime="20181117 16:16:01.843"></status>
+</kw>
+<status status="PASS" endtime="20181117 16:16:05.166" starttime="20181117 16:15:49.706"></status>
+</kw>
+<kw name="When user1 sends message &quot;Hello buddy&quot;" library="resource">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${\n}${user} sends message "${text}"</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:16:05.168" starttime="20181117 16:16:05.167"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${user}' == 'user1'</arg>
+<arg>Switch Application</arg>
+<arg>${user1}</arg>
+</arguments>
+<kw name="Switch Application" library="AppiumLibrary">
+<doc>Switches the active application by index or alias.</doc>
+<arguments>
+<arg>${user1}</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:16:05.169" starttime="20181117 16:16:05.168"></status>
+</kw>
+<status status="PASS" endtime="20181117 16:16:05.170" starttime="20181117 16:16:05.168"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${user}' == 'user2'</arg>
+<arg>Switch Application</arg>
+<arg>${user2}</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:16:05.170" starttime="20181117 16:16:05.170"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${TEXT_FIELD}</arg>
+</arguments>
+<msg timestamp="20181117 16:16:05.170" level="INFO">Clicking element 'id=com.google.android.apps.messaging:id/compose_message_text'.</msg>
+<status status="PASS" endtime="20181117 16:16:05.303" starttime="20181117 16:16:05.170"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${TEXT_FIELD}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20181117 16:16:05.304" level="INFO">Typing text 'Hello buddy' into text field 'id=com.google.android.apps.messaging:id/compose_message_text'</msg>
+<status status="PASS" endtime="20181117 16:16:07.216" starttime="20181117 16:16:05.304"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${SEND_BUTTON}</arg>
+</arguments>
+<msg timestamp="20181117 16:16:07.216" level="INFO">Clicking element 'xpath=//android.widget.ImageView[contains(@resource-id, "send")]'.</msg>
+<status status="PASS" endtime="20181117 16:16:08.155" starttime="20181117 16:16:07.216"></status>
+</kw>
+<status status="PASS" endtime="20181117 16:16:08.155" starttime="20181117 16:16:05.167"></status>
+</kw>
+<kw name="Then user2 receives message &quot;Hello buddy&quot;" library="resource">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${\n}Check if ${user} receives message "${text}"</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:16:08.159" starttime="20181117 16:16:08.159"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${user}' == 'user1'</arg>
+<arg>Switch Application</arg>
+<arg>${user1}</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:16:08.160" starttime="20181117 16:16:08.159"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${user}' == 'user2'</arg>
+<arg>Switch Application</arg>
+<arg>${user2}</arg>
+</arguments>
+<kw name="Switch Application" library="AppiumLibrary">
+<doc>Switches the active application by index or alias.</doc>
+<arguments>
+<arg>${user2}</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:16:08.160" starttime="20181117 16:16:08.160"></status>
+</kw>
+<status status="PASS" endtime="20181117 16:16:08.160" starttime="20181117 16:16:08.160"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20181117 16:16:13.161" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20181117 16:16:13.161" starttime="20181117 16:16:08.161"></status>
+</kw>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<doc>Verifies that element identified with locator is visible.</doc>
+<arguments>
+<arg>xpath=//android.widget.TextView[@text="${text}"]</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:16:13.564" starttime="20181117 16:16:13.161"></status>
+</kw>
+<status status="PASS" endtime="20181117 16:16:13.565" starttime="20181117 16:16:08.159"></status>
+</kw>
+<kw name="When user2 sends message &quot;Hello there. how r u?&quot;" library="resource">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${\n}${user} sends message "${text}"</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:16:13.566" starttime="20181117 16:16:13.565"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${user}' == 'user1'</arg>
+<arg>Switch Application</arg>
+<arg>${user1}</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:16:13.566" starttime="20181117 16:16:13.566"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${user}' == 'user2'</arg>
+<arg>Switch Application</arg>
+<arg>${user2}</arg>
+</arguments>
+<kw name="Switch Application" library="AppiumLibrary">
+<doc>Switches the active application by index or alias.</doc>
+<arguments>
+<arg>${user2}</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:16:13.567" starttime="20181117 16:16:13.567"></status>
+</kw>
+<status status="PASS" endtime="20181117 16:16:13.567" starttime="20181117 16:16:13.566"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${TEXT_FIELD}</arg>
+</arguments>
+<msg timestamp="20181117 16:16:13.567" level="INFO">Clicking element 'id=com.google.android.apps.messaging:id/compose_message_text'.</msg>
+<status status="PASS" endtime="20181117 16:16:13.793" starttime="20181117 16:16:13.567"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${TEXT_FIELD}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20181117 16:16:13.794" level="INFO">Typing text 'Hello there. how r u?' into text field 'id=com.google.android.apps.messaging:id/compose_message_text'</msg>
+<status status="PASS" endtime="20181117 16:16:15.316" starttime="20181117 16:16:13.794"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${SEND_BUTTON}</arg>
+</arguments>
+<msg timestamp="20181117 16:16:15.317" level="INFO">Clicking element 'xpath=//android.widget.ImageView[contains(@resource-id, "send")]'.</msg>
+<status status="PASS" endtime="20181117 16:16:16.420" starttime="20181117 16:16:15.316"></status>
+</kw>
+<status status="PASS" endtime="20181117 16:16:16.420" starttime="20181117 16:16:13.565"></status>
+</kw>
+<kw name="Then user1 receives message &quot;Hello there. how r u?&quot;" library="resource">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${\n}Check if ${user} receives message "${text}"</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:16:16.422" starttime="20181117 16:16:16.421"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${user}' == 'user1'</arg>
+<arg>Switch Application</arg>
+<arg>${user1}</arg>
+</arguments>
+<kw name="Switch Application" library="AppiumLibrary">
+<doc>Switches the active application by index or alias.</doc>
+<arguments>
+<arg>${user1}</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:16:16.422" starttime="20181117 16:16:16.422"></status>
+</kw>
+<status status="PASS" endtime="20181117 16:16:16.423" starttime="20181117 16:16:16.422"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${user}' == 'user2'</arg>
+<arg>Switch Application</arg>
+<arg>${user2}</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:16:16.423" starttime="20181117 16:16:16.423"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20181117 16:16:21.424" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20181117 16:16:21.424" starttime="20181117 16:16:16.423"></status>
+</kw>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<doc>Verifies that element identified with locator is visible.</doc>
+<arguments>
+<arg>xpath=//android.widget.TextView[@text="${text}"]</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:16:21.534" starttime="20181117 16:16:21.424"></status>
+</kw>
+<status status="PASS" endtime="20181117 16:16:21.534" starttime="20181117 16:16:16.421"></status>
+</kw>
+<kw type="teardown" name="User clears chat and close Messages app" library="resource">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${\n}INFO: Users clears chat and close Messages app</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:16:21.536" starttime="20181117 16:16:21.535"></status>
+</kw>
+<kw name="Switch Application" library="AppiumLibrary">
+<doc>Switches the active application by index or alias.</doc>
+<arguments>
+<arg>${user1}</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:16:21.536" starttime="20181117 16:16:21.536"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${CONTACT_OPTIONS}</arg>
+</arguments>
+<msg timestamp="20181117 16:16:21.536" level="INFO">Clicking element 'xpath=//android.widget.ImageView[@content-desc="More options"]'.</msg>
+<status status="PASS" endtime="20181117 16:16:21.673" starttime="20181117 16:16:21.536"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20181117 16:16:22.675" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20181117 16:16:22.675" starttime="20181117 16:16:21.673"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${DELETE_MESS_BUTTON}</arg>
+</arguments>
+<msg timestamp="20181117 16:16:22.675" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text="Delete"]'.</msg>
+<status status="PASS" endtime="20181117 16:16:23.683" starttime="20181117 16:16:22.675"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20181117 16:16:24.684" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20181117 16:16:24.684" starttime="20181117 16:16:23.683"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${DELETE_CONFIRM_BUTTON}</arg>
+</arguments>
+<msg timestamp="20181117 16:16:24.684" level="INFO">Clicking element 'xpath=//android.widget.Button[@text="DELETE"]'.</msg>
+<status status="PASS" endtime="20181117 16:16:24.837" starttime="20181117 16:16:24.684"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20181117 16:16:25.839" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20181117 16:16:25.839" starttime="20181117 16:16:24.837"></status>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" endtime="20181117 16:16:26.726" starttime="20181117 16:16:25.839"></status>
+</kw>
+<kw name="Switch Application" library="AppiumLibrary">
+<doc>Switches the active application by index or alias.</doc>
+<arguments>
+<arg>${user2}</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:16:26.726" starttime="20181117 16:16:26.726"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${CONTACT_OPTIONS}</arg>
+</arguments>
+<msg timestamp="20181117 16:16:26.727" level="INFO">Clicking element 'xpath=//android.widget.ImageView[@content-desc="More options"]'.</msg>
+<status status="PASS" endtime="20181117 16:16:27.025" starttime="20181117 16:16:26.726"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20181117 16:16:28.027" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20181117 16:16:28.027" starttime="20181117 16:16:27.025"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${DELETE_MESS_BUTTON}</arg>
+</arguments>
+<msg timestamp="20181117 16:16:28.027" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text="Delete"]'.</msg>
+<status status="PASS" endtime="20181117 16:16:28.498" starttime="20181117 16:16:28.027"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20181117 16:16:29.498" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20181117 16:16:29.498" starttime="20181117 16:16:28.498"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${DELETE_CONFIRM_BUTTON}</arg>
+</arguments>
+<msg timestamp="20181117 16:16:29.498" level="INFO">Clicking element 'xpath=//android.widget.Button[@text="DELETE"]'.</msg>
+<status status="PASS" endtime="20181117 16:16:29.731" starttime="20181117 16:16:29.498"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20181117 16:16:30.731" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20181117 16:16:30.731" starttime="20181117 16:16:29.731"></status>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" endtime="20181117 16:16:31.396" starttime="20181117 16:16:30.731"></status>
+</kw>
+<status status="PASS" endtime="20181117 16:16:31.397" starttime="20181117 16:16:21.535"></status>
+</kw>
+<status status="PASS" endtime="20181117 16:16:31.397" critical="yes" starttime="20181117 16:15:11.481"></status>
+</test>
+<kw type="teardown" name="Terminate processes on devices" library="resource">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${\n}INFO: Teardown - Terminate process on both devices</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:16:31.399" starttime="20181117 16:16:31.399"></status>
+</kw>
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>${CMD_EXE}</arg>
+<arg>/c</arg>
+<arg>${ABD_KILL_COMMAND}</arg>
+</arguments>
+<msg timestamp="20181117 16:16:31.400" level="INFO">Starting process:
+C:\WINDOWS\System32\cmd.exe /c "adb kill-server"</msg>
+<msg timestamp="20181117 16:16:31.402" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20181117 16:16:31.451" level="INFO">Process completed.</msg>
+<status status="PASS" endtime="20181117 16:16:31.451" starttime="20181117 16:16:31.399"></status>
+</kw>
+<kw name="Switch Application" library="AppiumLibrary">
+<doc>Switches the active application by index or alias.</doc>
+<arguments>
+<arg>${user1}</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:16:31.451" starttime="20181117 16:16:31.451"></status>
+</kw>
+<kw name="Terminate All Processes" library="Process">
+<doc>Terminates all still running processes started by this library.</doc>
+<msg timestamp="20181117 16:16:31.451" level="INFO">Gracefully terminating process.</msg>
+<msg timestamp="20181117 16:17:01.543" level="INFO">Graceful termination failed.</msg>
+<msg timestamp="20181117 16:17:01.543" level="INFO">Forcefully killing process.</msg>
+<msg timestamp="20181117 16:17:01.644" level="INFO">Process completed.</msg>
+<msg timestamp="20181117 16:17:01.644" level="INFO">Gracefully terminating process.</msg>
+<msg timestamp="20181117 16:17:31.690" level="INFO">Graceful termination failed.</msg>
+<msg timestamp="20181117 16:17:31.690" level="INFO">Forcefully killing process.</msg>
+<msg timestamp="20181117 16:17:31.790" level="INFO">Process completed.</msg>
+<status status="PASS" endtime="20181117 16:17:31.790" starttime="20181117 16:16:31.451"></status>
+</kw>
+<kw name="Switch Application" library="AppiumLibrary">
+<doc>Switches the active application by index or alias.</doc>
+<arguments>
+<arg>${user2}</arg>
+</arguments>
+<status status="PASS" endtime="20181117 16:17:31.791" starttime="20181117 16:17:31.790"></status>
+</kw>
+<kw name="Terminate All Processes" library="Process">
+<doc>Terminates all still running processes started by this library.</doc>
+<status status="PASS" endtime="20181117 16:17:31.791" starttime="20181117 16:17:31.791"></status>
+</kw>
+<status status="PASS" endtime="20181117 16:17:31.791" starttime="20181117 16:16:31.398"></status>
+</kw>
+<doc>Test cases for multiple devices interact each other</doc>
+<status status="PASS" endtime="20181117 16:17:31.791" starttime="20181117 16:15:01.255"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="FirstTestSuite" pass="1">FirstTestSuite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

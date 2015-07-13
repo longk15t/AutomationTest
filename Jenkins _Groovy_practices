@@ -1,0 +1,37 @@
+# Get environment variable value:
+import hudson.model.*
+def build = Thread.currentThread().executable
+def envVarsMap = build.properties.get("envVars")
+jenkinsHomeDir = envVarsMap['JENKINS_HOME'] // or other environment variable
+
+# Get param value and add other param
+
+import hudson.model.*
+import hudson.model.Computer.ListPossibleNames
+def build = Thread.currentThread().executable
+def paramActionsOri = build.actions.find {
+    it instanceof ParametersAction
+}
+def paramActions = build.actions.find {
+    it instanceof ParametersAction
+}
+def buildActions = build.getActions(hudson.model.ParametersAction)
+def paramAction = buildActions.get(0)
+def firstAgent  = paramAction.createVariableResolver(build).resolve("FIRST_PARAM")
+def secondAgent  = paramAction.createVariableResolver(build).resolve("SECOND_PARAM")
+
+//Add param to current job
+paramActions = paramActions.merge(
+    new ParametersAction([
+        new StringParameterValue("FIRST_PARAM", "some value1"),
+        new StringParameterValue("SECOND_PARAM", "some value2")
+    ])
+)
+build.actions.remove(paramActionsOri)
+build.actions.add(paramActions)
+return
+
+# Get IP of a node slave (except master node)
+import hudson.model.*
+def node = jenkins.model.Jenkins.instance.getNode("node_name")
+node_ip = node.computer.getChannel().call(new ListPossibleNames()).get(0)

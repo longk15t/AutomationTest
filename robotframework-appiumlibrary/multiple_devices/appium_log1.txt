@@ -1,0 +1,511 @@
+[35m[Appium][39m Welcome to Appium v1.9.1
+[35m[Appium][39m Non-default server args:
+[35m[Appium][39m   address: 127.0.0.1
+[35m[Appium][39m Appium REST http interface listener started on 127.0.0.1:4723
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session[39m
+[35m[HTTP][39m [90m{"capabilities":{"alwaysMatch":{"platformName":"Android"},"firstMatch":[{}]},"desiredCapabilities":{"deviceName":"emulator-5554","automationName":"uiautomator2","newCommandTimeout":"2500","platformVersion":"7.0","appPackage":"com.google.android.apps.messaging","platformName":"Android","appActivity":"com.google.android.apps.messaging.ui.ConversationListActivity"}}[39m
+[debug] [35m[W3C][39m Calling AppiumDriver.createSession() with args: [{"deviceName":"emulator-5554","automationName":"uiautomator2","newCommandTimeout":"2500","platformVersion":"7.0","appPackage":"com.google.android.apps.messaging","platformName":"Android","appActivity":"com.google.android.apps.messaging.ui.ConversationListActivity"},null,{"alwaysMatch":{"platformName":"Android"},"firstMatch":[{}]}]
+[debug] [35m[BaseDriver][39m Event 'newSessionRequested' logged at 1542446111514 (16:15:11 GMT+0700 (SE Asia Standard Time))
+[35m[Appium][39m Could not parse W3C capabilities: 'deviceName' can't be blank
+[35m[Appium][39m Trying to fix W3C capabilities by merging them with JSONWP caps
+[35m[BaseDriver][39m The capabilities ["deviceName","automationName","newCommandTimeout","platformVersion","appPackage","appActivity"] are not standard capabilities and should have an extension prefix
+[35m[Appium][39m Could not parse fixed W3C capabilities: 'newCommandTimeout' must be of type number. Falling back to JSONWP protocol
+[35m[Appium][39m Creating new AndroidUiautomator2Driver (v1.19.0) session
+[35m[Appium][39m Capabilities:
+[35m[Appium][39m   deviceName: emulator-5554
+[35m[Appium][39m   automationName: uiautomator2
+[35m[Appium][39m   newCommandTimeout: 2500
+[35m[Appium][39m   platformVersion: 7.0
+[35m[Appium][39m   appPackage: com.google.android.apps.messaging
+[35m[Appium][39m   platformName: Android
+[35m[Appium][39m   appActivity: com.google.android.apps.messaging.ui.ConversationListActivity
+[debug] [35m[BaseDriver][39m Creating session with MJSONWP desired capabilities: {"deviceName":"emulator-555...
+[35m[BaseDriver][39m Capability 'newCommandTimeout' changed from string ('2500') to integer (2500). This may cause unexpected behavior
+[35m[BaseDriver][39m Session created with session id: c3975306-3240-49c3-b0eb-e608561a06f9
+[35m[AndroidDriver][39m Java version is: 1.8.0_181
+[35m[ADB][39m Checking whether adb is present
+[35m[ADB][39m Found 21 'build-tools' folders under 'C:\Users\longnhu\AppData\Local\Android\Sdk' (newest first):
+[35m[ADB][39m     C:/Users/longnhu/AppData/Local/Android/Sdk/build-tools/28.0.3
+[35m[ADB][39m     C:/Users/longnhu/AppData/Local/Android/Sdk/build-tools/28.0.0
+[35m[ADB][39m     C:/Users/longnhu/AppData/Local/Android/Sdk/build-tools/27.0.3
+[35m[ADB][39m     C:/Users/longnhu/AppData/Local/Android/Sdk/build-tools/27.0.2
+[35m[ADB][39m     C:/Users/longnhu/AppData/Local/Android/Sdk/build-tools/27.0.1
+[35m[ADB][39m     C:/Users/longnhu/AppData/Local/Android/Sdk/build-tools/27.0.0
+[35m[ADB][39m     C:/Users/longnhu/AppData/Local/Android/Sdk/build-tools/26.0.3
+[35m[ADB][39m     C:/Users/longnhu/AppData/Local/Android/Sdk/build-tools/26.0.2
+[35m[ADB][39m     C:/Users/longnhu/AppData/Local/Android/Sdk/build-tools/26.0.1
+[35m[ADB][39m     C:/Users/longnhu/AppData/Local/Android/Sdk/build-tools/26.0.0
+[35m[ADB][39m     C:/Users/longnhu/AppData/Local/Android/Sdk/build-tools/25.0.3
+[35m[ADB][39m     C:/Users/longnhu/AppData/Local/Android/Sdk/build-tools/25.0.2
+[35m[ADB][39m     C:/Users/longnhu/AppData/Local/Android/Sdk/build-tools/25.0.1
+[35m[ADB][39m     C:/Users/longnhu/AppData/Local/Android/Sdk/build-tools/25.0.0
+[35m[ADB][39m     C:/Users/longnhu/AppData/Local/Android/Sdk/build-tools/24.0.3
+[35m[ADB][39m     C:/Users/longnhu/AppData/Local/Android/Sdk/build-tools/24.0.2
+[35m[ADB][39m     C:/Users/longnhu/AppData/Local/Android/Sdk/build-tools/24.0.1
+[35m[ADB][39m     C:/Users/longnhu/AppData/Local/Android/Sdk/build-tools/24.0.0
+[35m[ADB][39m     C:/Users/longnhu/AppData/Local/Android/Sdk/build-tools/23.0.3
+[35m[ADB][39m     C:/Users/longnhu/AppData/Local/Android/Sdk/build-tools/23.0.2
+[35m[ADB][39m     C:/Users/longnhu/AppData/Local/Android/Sdk/build-tools/23.0.1
+[35m[ADB][39m Using adb.exe from C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe
+[35m[AndroidDriver][39m Retrieving device list
+[debug] [35m[ADB][39m Trying to find a connected android device
+[debug] [35m[ADB][39m Getting connected devices...
+[debug] [35m[ADB][39m 2 device(s) connected
+[35m[AndroidDriver][39m Looking for a device with Android '7.0'
+[debug] [35m[ADB][39m Setting device id to emulator-5554
+[35m[ADB][39m Getting device platform version
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell getprop ro.build.version.release'
+[debug] [35m[ADB][39m Current device property 'ro.build.version.release': 7.0
+[35m[AndroidDriver][39m Using device: emulator-5554
+[debug] [35m[ADB][39m Setting device id to emulator-5554
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell getprop ro.build.version.sdk'
+[debug] [35m[ADB][39m Current device property 'ro.build.version.sdk': 24
+[debug] [35m[ADB][39m Device API level: 24
+[35m[AndroidDriver][39m No app sent in, not parsing package/activity
+[35m[ADB][39m Getting device platform version
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell getprop ro.build.version.release'
+[debug] [35m[ADB][39m Current device property 'ro.build.version.release': 7.0
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell wm size'
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell wm density'
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell getprop ro.product.model'
+[debug] [35m[ADB][39m Current device property 'ro.product.model': Android SDK built for x86
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell getprop ro.product.manufacturer'
+[debug] [35m[ADB][39m Current device property 'ro.product.manufacturer': Google
+[debug] [35m[ADB][39m Device API level: 24
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell am force-stop io.appium.uiautomator2.server'
+[debug] [35m[ADB][39m Checking app cert for C:\Users\longnhu\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v1.18.0.apk
+[35m[ADB][39m Using apksigner.bat from C:\Users\longnhu\AppData\Local\Android\Sdk\build-tools\28.0.3\apksigner.bat
+[debug] [35m[ADB][39m Starting 'C:\Users\longnhu\AppData\Local\Android\Sdk\build-tools\28.0.3\apksigner.bat' with args '["verify","--print-certs","C:\\Users\\longnhu\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-uiautomator2-server\\apks\\appium-uiautomator2-server-v1.18.0.apk"]'
+[debug] [35m[ADB][39m apksigner stdout: Signer #1 certificate DN: EMAILADDRESS=android@android.com, CN=Android, OU=Android, O=Android, L=Mountain View, ST=California, C=US
+[debug] [35m[ADB][39m Signer #1 certificate SHA-256 digest: a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc
+[debug] [35m[ADB][39m Signer #1 certificate SHA-1 digest: 61ed377e85d386a8dfee6b864bd85b0bfaa5af81
+[debug] [35m[ADB][39m Signer #1 certificate MD5 digest: e89b158e4bcf988ebd09eb83f5378e87
+[debug] [35m[ADB][39m WARNING: META-INF/INDEX.LIST not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+[debug] [35m[ADB][39m WARNING: META-INF/io.netty.versions.properties not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+[debug] [35m[ADB][39m 
+[debug] [35m[ADB][39m 'C:\Users\longnhu\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v1.18.0.apk' is already signed.
+[debug] [35m[ADB][39m Checking app cert for C:\Users\longnhu\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk
+[debug] [35m[ADB][39m Starting 'C:\Users\longnhu\AppData\Local\Android\Sdk\build-tools\28.0.3\apksigner.bat' with args '["verify","--print-certs","C:\\Users\\longnhu\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-uiautomator2-server\\apks\\appium-uiautomator2-server-debug-androidTest.apk"]'
+[debug] [35m[ADB][39m apksigner stdout: Signer #1 certificate DN: EMAILADDRESS=android@android.com, CN=Android, OU=Android, O=Android, L=Mountain View, ST=California, C=US
+[debug] [35m[ADB][39m Signer #1 certificate SHA-256 digest: a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc
+[debug] [35m[ADB][39m Signer #1 certificate SHA-1 digest: 61ed377e85d386a8dfee6b864bd85b0bfaa5af81
+[debug] [35m[ADB][39m Signer #1 certificate MD5 digest: e89b158e4bcf988ebd09eb83f5378e87
+[debug] [35m[ADB][39m 
+[debug] [35m[ADB][39m 'C:\Users\longnhu\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk' is already signed.
+[debug] [35m[ADB][39m Getting install status for io.appium.uiautomator2.server
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell pm list packages io.appium.uiautomator2.server'
+[debug] [35m[ADB][39m App is installed
+[debug] [35m[ADB][39m Getting package info for 'io.appium.uiautomator2.server'
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys package io.appium.uiautomator2.server'
+[35m[ADB][39m Checking whether aapt is present
+[35m[ADB][39m Using aapt.exe from C:\Users\longnhu\AppData\Local\Android\Sdk\build-tools\28.0.3\aapt.exe
+[debug] [35m[ADB][39m The installed 'io.appium.uiautomator2.server' package does not require upgrade ('1.18.0' >= '1.18.0')
+[debug] [35m[ADB][39m Getting install status for io.appium.uiautomator2.server.test
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell pm list packages io.appium.uiautomator2.server.test'
+[debug] [35m[ADB][39m App is installed
+[debug] [35m[ADB][39m Getting package info for 'io.appium.uiautomator2.server.test'
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys package io.appium.uiautomator2.server.test'
+[35m[ADB][39m Cannot read version codes of 'C:\Users\longnhu\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk' and/or 'io.appium.uiautomator2.server.test'
+[35m[ADB][39m Cannot read version names of 'C:\Users\longnhu\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk' and/or 'io.appium.uiautomator2.server.test'. Assuming correct app version is already installed
+[debug] [35m[UiAutomator2][39m Waiting up to 20000ms for instrumentation 'io.appium.uiautomator2.server.test/android.support.test.runner.AndroidJUnitRunner' to be available
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell pm list instrumentation'
+[debug] [35m[UiAutomator2][39m Instrumentation 'io.appium.uiautomator2.server.test/android.support.test.runner.AndroidJUnitRunner' available
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 wait-for-device'
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell echo ping'
+[debug] [35m[AndroidDriver][39m Pushing settings apk to device...
+[debug] [35m[ADB][39m Getting install status for io.appium.settings
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell pm list packages io.appium.settings'
+[debug] [35m[ADB][39m App is installed
+[debug] [35m[ADB][39m Getting package info for 'io.appium.settings'
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys package io.appium.settings'
+[debug] [35m[ADB][39m The installed 'io.appium.settings' package does not require upgrade ('2.3.0' >= '2.3.0')
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell ps'
+[debug] [35m[AndroidDriver][39m io.appium.settings is already running. There is no need to reset its permissions.
+[debug] [35m[ADB][39m Device API level: 24
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell appops set io.appium.settings android\:mock_location allow'
+[35m[AndroidDriver][39m setDeviceLanguageCountry requires language or country.
+[35m[AndroidDriver][39m Got language: 'null' and country: 'null'
+[debug] [35m[Logcat][39m Starting logcat capture
+[debug] [35m[AndroidDriver][39m Pushing unlock helper app to device...
+[debug] [35m[ADB][39m Getting install status for io.appium.unlock
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell pm list packages io.appium.unlock'
+[debug] [35m[ADB][39m App is installed
+[debug] [35m[ADB][39m Getting package info for 'io.appium.unlock'
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys package io.appium.unlock'
+[debug] [35m[ADB][39m The installed 'io.appium.unlock' package does not require upgrade ('2.0.0' >= '2.0.0')
+[debug] [35m[UiAutomator2][39m Forwarding UiAutomator2 Server port 6790 to 8200
+[debug] [35m[ADB][39m Forwarding system: 8200 to device: 6790
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 forward tcp\:8200 tcp\:6790'
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell rm -rf /data/local/tmp/strings.json'
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell pm path com.google.android.apps.messaging'
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 pull /system/app/PrebuiltBugle/PrebuiltBugle.apk C\:\\Users\\longnhu\\AppData\\Local\\Temp\\com.google.android.apps.messaging.apk'
+[debug] [35m[ADB][39m Pulled app for package 'com.google.android.apps.messaging' to 'C:\Users\longnhu\AppData\Local\Temp\com.google.android.apps.messaging.apk'
+[debug] [35m[AndroidDriver][39m Extracting strings from apk
+[debug] [35m[AndroidDriver][39m C:\Users\longnhu\AppData\Local\Temp\com.google.android.apps.messaging.apk
+[debug] [35m[AndroidDriver][39m null
+[debug] [35m[AndroidDriver][39m C:\Users\longnhu\AppData\Local\Temp\com.google.android.apps.messaging
+[debug] [35m[ADB][39m Extracting strings for language: default
+[35m[ADB][39m Successfully extracted 802 strings from 'C:\Users\longnhu\AppData\Local\Temp\com.google.android.apps.messaging.apk' resources for '(default)' configuration
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 push C\:\\Users\\longnhu\\AppData\\Local\\Temp\\com.google.android.apps.messaging\\strings.json /data/local/tmp'
+[debug] [35m[UiAutomator2][39m No app capability. Assuming it is already on the device
+[debug] [35m[ADB][39m Getting install status for com.google.android.apps.messaging
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell pm list packages com.google.android.apps.messaging'
+[debug] [35m[ADB][39m App is installed
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell am force-stop com.google.android.apps.messaging'
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell pm clear com.google.android.apps.messaging'
+[debug] [35m[AndroidDriver][39m Performed fast reset on the installed 'com.google.android.apps.messaging' application (stop and clear)
+[debug] [35m[ADB][39m Checking app cert for null
+[debug] [35m[ADB][39m 'null' doesn't exist
+[debug] [35m[ADB][39m Getting all processes with uiautomator
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell ps'
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell am force-stop io.appium.uiautomator2.server'
+[35m[UiAutomator2][39m Starting uiautomator2 server 1.18.0
+[35m[UiAutomator2][39m Using UIAutomator2 server from 'C:\Users\longnhu\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v1.18.0.apk' and test from 'C:\Users\longnhu\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk'
+[35m[UiAutomator2][39m Running command: 'adb -s emulator-5554 shell am instrument -w io.appium.uiautomator2.server.test/android.support.test.runner.AndroidJUnitRunner'
+[35m[UiAutomator2][39m Waiting up to 20000ms for UiAutomator2 to be online...
+[debug] [35m[JSONWP Proxy][39m Matched '/status' to command name 'getStatus'
+[debug] [35m[JSONWP Proxy][39m Proxying [GET /status] to [GET http://localhost:8200/wd/hub/status] with no body
+[debug] [35m[JSONWP Proxy][39m Matched '/status' to command name 'getStatus'
+[debug] [35m[JSONWP Proxy][39m Proxying [GET /status] to [GET http://localhost:8200/wd/hub/status] with no body
+[debug] [35m[JSONWP Proxy][39m Matched '/status' to command name 'getStatus'
+[debug] [35m[JSONWP Proxy][39m Proxying [GET /status] to [GET http://localhost:8200/wd/hub/status] with no body
+[debug] [35m[JSONWP Proxy][39m Matched '/status' to command name 'getStatus'
+[debug] [35m[JSONWP Proxy][39m Proxying [GET /status] to [GET http://localhost:8200/wd/hub/status] with no body
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: "{\"sessionId\":\"SESSIONID\",\"status\":0,\"value\":\"Status Invoked\"}"
+[debug] [35m[JSONWP Proxy][39m Matched '/session' to command name 'createSession'
+[debug] [35m[JSONWP Proxy][39m Proxying [POST /session] to [POST http://localhost:8200/wd/hub/session] with body: {"desiredCapabilities":{"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"deviceName":"emulator-5554","automationName":"uiautomator2","newCommandTimeout":2500,"platformVersion":"7.0","appPackage":"com.google.android.apps.messaging","platformName":"Android","appActivity":"com.google.android.apps.messaging.ui.ConversationListActivity"},"deviceName":"emulator-5554","automationName":"uiautomator2","newCommandTimeout":2500,"platformVersion":"7.0","appPackage":"com.google.android.apps.messaging","platformName":"Android","appActivity":"com.google.android.apps.messaging.ui.ConversationListActivity","deviceUDID":"emulator-5554","deviceScreenSize":"1440x2880","deviceScreenDensity":560,"deviceModel":"Android SDK built for x86","deviceManufacturer":"Google","deviceApiLevel":24}}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: {"sessionId":"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7","status":0,"value":"Created Session"}
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell dumpsys window'
+[35m[AndroidDriver][39m Screen already unlocked, doing nothing
+[35m[UiAutomator2][39m UiAutomator2 did not start the activity we were waiting for, 'com.google.android.apps.messaging/com.google.android.apps.messaging.ui.ConversationListActivity'. Starting it ourselves
+[debug] [35m[ADB][39m Device API level: 24
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell am start -W -n com.google.android.apps.messaging/com.google.android.apps.messaging.ui.ConversationListActivity -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000'
+[debug] [35m[JSONWP Proxy][39m Proxying [GET /appium/device/pixel_ratio] to [GET http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7/appium/device/pixel_ratio] with body: {}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: "{\"sessionId\":\"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7\",\"status\":0,\"value\":3.5}"
+[debug] [35m[JSONWP Proxy][39m Matched '/appium/device/system_bars' to command name 'getSystemBars'
+[debug] [35m[JSONWP Proxy][39m Proxying [GET /appium/device/system_bars] to [GET http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7/appium/device/system_bars] with body: {}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: "{\"sessionId\":\"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7\",\"status\":0,\"value\":{\"statusBar\":84}}"
+[debug] [35m[JSONWP Proxy][39m Matched '/window/current/size' to command name 'getWindowSize'
+[debug] [35m[JSONWP Proxy][39m Proxying [GET /window/current/size] to [GET http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7/window/current/size] with body: {}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: "{\"sessionId\":\"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7\",\"status\":0,\"value\":{\"height\":2712,\"width\":1440}}"
+[35m[Appium][39m New AndroidUiautomator2Driver session created successfully, session c3975306-3240-49c3-b0eb-e608561a06f9 added to master session list
+[debug] [35m[BaseDriver][39m Event 'newSessionStarted' logged at 1542446129918 (16:15:29 GMT+0700 (SE Asia Standard Time))
+[debug] [35m[MJSONWP][39m Cached the protocol value 'MJSONWP' for the new session c3975306-3240-49c3-b0eb-e608561a06f9
+[debug] [35m[MJSONWP][39m Responding to client with driver.createSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"deviceName":"emulator-5554","automationName":"uiautomator2","newCommandTimeout":2500,"platformVersion":"7.0","appPackage":"com.google.android.apps.messaging","platformName":"Android","appActivity":"com.google.android.apps.messaging.ui.ConversationListActivity"},"deviceName":"emulator-5554","automationName":"uiautomator2","newCommandTimeout":2500,"platformVersion":"7.0","appPackage":"com.google.android.apps.messaging","platformName":"Android","appActivity":"com.google.android.apps.messaging.ui.ConversationListActivity","deviceUDID":"emulator-5554","deviceScreenSize":"1440x2880","deviceScreenDensity":560,"deviceModel":"Android SDK built for x86","deviceManufacturer":"Google","deviceApiLevel":24,"pixelRatio":3.5,"statBarHeight":84,"viewportRect":{"left":0,"top":84,"width":1440,"height":2628}}
+[35m[HTTP][39m [37m<-- POST /wd/hub/session [39m[32m200[39m [90m18409 ms - 1079[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/elements[39m
+[35m[HTTP][39m [90m{"using":"id","sessionId":"c3975306-3240-49c3-b0eb-e608561a06f9","value":"com.google.android.apps.messaging:id/start_new_conversation_button"}[39m
+[debug] [35m[MJSONWP][39m Calling AppiumDriver.findElements() with args: ["id","com.google.android.apps.messaging:id/start_new_conversation_button","c3975306-3240-49c3-b0eb-e608561a06f9"]
+[debug] [35m[BaseDriver][39m Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [35m[BaseDriver][39m Waiting up to 0 ms for condition
+[debug] [35m[JSONWP Proxy][39m Matched '/elements' to command name 'findElements'
+[debug] [35m[JSONWP Proxy][39m Proxying [POST /elements] to [POST http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7/elements] with body: {"strategy":"id","selector":"com.google.android.apps.messaging:id/start_new_conversation_button","context":"","multiple":true}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: {"sessionId":"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7","status":0,"value":[{"ELEMENT":"332e1b32-5346-490c-ab4a-eb29588f748f"}]}
+[debug] [35m[MJSONWP][39m Responding to client with driver.findElements() result: [{"ELEMENT":"332e1b32-5346-490c-ab4a-eb29588f748f"}]
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/elements [39m[32m200[39m [90m348 ms - 124[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/element/332e1b32-5346-490c-ab4a-eb29588f748f/displayed[39m
+[35m[HTTP][39m [90m{}[39m
+[debug] [35m[MJSONWP][39m Calling AppiumDriver.elementDisplayed() with args: ["332e1b32-5346-490c-ab4a-eb29588f748f","c3975306-3240-49c3-b0eb-e608561a06f9"]
+[debug] [35m[JSONWP Proxy][39m Matched '/element/332e1b32-5346-490c-ab4a-eb29588f748f/attribute/displayed' to command name 'getAttribute'
+[debug] [35m[JSONWP Proxy][39m Proxying [GET /element/332e1b32-5346-490c-ab4a-eb29588f748f/attribute/displayed] to [GET http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7/element/332e1b32-5346-490c-ab4a-eb29588f748f/attribute/displayed] with body: {}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: "{\"sessionId\":\"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7\",\"status\":0,\"value\":\"true\"}"
+[debug] [35m[MJSONWP][39m Responding to client with driver.elementDisplayed() result: true
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/element/332e1b32-5346-490c-ab4a-eb29588f748f/displayed [39m[32m200[39m [90m566 ms - 76[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/elements[39m
+[35m[HTTP][39m [90m{"using":"id","sessionId":"c3975306-3240-49c3-b0eb-e608561a06f9","value":"com.google.android.apps.messaging:id/start_new_conversation_button"}[39m
+[debug] [35m[MJSONWP][39m Calling AppiumDriver.findElements() with args: ["id","com.google.android.apps.messaging:id/start_new_conversation_button","c3975306-3240-49c3-b0eb-e608561a06f9"]
+[debug] [35m[BaseDriver][39m Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [35m[BaseDriver][39m Waiting up to 0 ms for condition
+[debug] [35m[JSONWP Proxy][39m Matched '/elements' to command name 'findElements'
+[debug] [35m[JSONWP Proxy][39m Proxying [POST /elements] to [POST http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7/elements] with body: {"strategy":"id","selector":"com.google.android.apps.messaging:id/start_new_conversation_button","context":"","multiple":true}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: {"sessionId":"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7","status":0,"value":[{"ELEMENT":"79285091-ccd1-4b8b-ae94-7cfcfa7bd3fb"}]}
+[debug] [35m[MJSONWP][39m Responding to client with driver.findElements() result: [{"ELEMENT":"79285091-ccd1-4b8b-ae94-7cfcfa7bd3fb"}]
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/elements [39m[32m200[39m [90m27 ms - 124[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/element/79285091-ccd1-4b8b-ae94-7cfcfa7bd3fb/click[39m
+[35m[HTTP][39m [90m{"sessionId":"c3975306-3240-49c3-b0eb-e608561a06f9","id":"79285091-ccd1-4b8b-ae94-7cfcfa7bd3fb"}[39m
+[debug] [35m[MJSONWP][39m Calling AppiumDriver.click() with args: ["79285091-ccd1-4b8b-ae94-7cfcfa7bd3fb","c3975306-3240-49c3-b0eb-e608561a06f9"]
+[debug] [35m[JSONWP Proxy][39m Matched '/element/79285091-ccd1-4b8b-ae94-7cfcfa7bd3fb/click' to command name 'click'
+[debug] [35m[JSONWP Proxy][39m Proxying [POST /element/79285091-ccd1-4b8b-ae94-7cfcfa7bd3fb/click] to [POST http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7/element/79285091-ccd1-4b8b-ae94-7cfcfa7bd3fb/click] with body: {"element":"79285091-ccd1-4b8b-ae94-7cfcfa7bd3fb"}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: {"sessionId":"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7","status":0,"value":true}
+[debug] [35m[MJSONWP][39m Responding to client with driver.click() result: true
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/element/79285091-ccd1-4b8b-ae94-7cfcfa7bd3fb/click [39m[32m200[39m [90m47 ms - 76[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/elements[39m
+[35m[HTTP][39m [90m{"using":"id","sessionId":"c3975306-3240-49c3-b0eb-e608561a06f9","value":"com.google.android.apps.messaging:id/recipient_text_view"}[39m
+[debug] [35m[MJSONWP][39m Calling AppiumDriver.findElements() with args: ["id","com.google.android.apps.messaging:id/recipient_text_view","c3975306-3240-49c3-b0eb-e608561a06f9"]
+[debug] [35m[BaseDriver][39m Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [35m[BaseDriver][39m Waiting up to 0 ms for condition
+[debug] [35m[JSONWP Proxy][39m Matched '/elements' to command name 'findElements'
+[debug] [35m[JSONWP Proxy][39m Proxying [POST /elements] to [POST http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7/elements] with body: {"strategy":"id","selector":"com.google.android.apps.messaging:id/recipient_text_view","context":"","multiple":true}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: {"sessionId":"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7","status":0,"value":[]}
+[debug] [35m[MJSONWP][39m Responding to client with driver.findElements() result: []
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/elements [39m[32m200[39m [90m59 ms - 74[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/elements[39m
+[35m[HTTP][39m [90m{"using":"id","sessionId":"c3975306-3240-49c3-b0eb-e608561a06f9","value":"com.google.android.apps.messaging:id/recipient_text_view"}[39m
+[debug] [35m[MJSONWP][39m Calling AppiumDriver.findElements() with args: ["id","com.google.android.apps.messaging:id/recipient_text_view","c3975306-3240-49c3-b0eb-e608561a06f9"]
+[debug] [35m[BaseDriver][39m Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [35m[BaseDriver][39m Waiting up to 0 ms for condition
+[debug] [35m[JSONWP Proxy][39m Matched '/elements' to command name 'findElements'
+[debug] [35m[JSONWP Proxy][39m Proxying [POST /elements] to [POST http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7/elements] with body: {"strategy":"id","selector":"com.google.android.apps.messaging:id/recipient_text_view","context":"","multiple":true}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: {"sessionId":"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7","status":0,"value":[]}
+[debug] [35m[MJSONWP][39m Responding to client with driver.findElements() result: []
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/elements [39m[32m200[39m [90m878 ms - 74[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/elements[39m
+[35m[HTTP][39m [90m{"using":"id","sessionId":"c3975306-3240-49c3-b0eb-e608561a06f9","value":"com.google.android.apps.messaging:id/recipient_text_view"}[39m
+[debug] [35m[MJSONWP][39m Calling AppiumDriver.findElements() with args: ["id","com.google.android.apps.messaging:id/recipient_text_view","c3975306-3240-49c3-b0eb-e608561a06f9"]
+[debug] [35m[BaseDriver][39m Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [35m[BaseDriver][39m Waiting up to 0 ms for condition
+[debug] [35m[JSONWP Proxy][39m Matched '/elements' to command name 'findElements'
+[debug] [35m[JSONWP Proxy][39m Proxying [POST /elements] to [POST http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7/elements] with body: {"strategy":"id","selector":"com.google.android.apps.messaging:id/recipient_text_view","context":"","multiple":true}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: {"sessionId":"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7","status":0,"value":[{"ELEMENT":"88b4e3a5-1205-47bd-a63f-836b1950244a"}]}
+[debug] [35m[MJSONWP][39m Responding to client with driver.findElements() result: [{"ELEMENT":"88b4e3a5-1205-47bd-a63f-836b1950244a"}]
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/elements [39m[32m200[39m [90m1151 ms - 124[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/element/88b4e3a5-1205-47bd-a63f-836b1950244a/displayed[39m
+[35m[HTTP][39m [90m{}[39m
+[debug] [35m[MJSONWP][39m Calling AppiumDriver.elementDisplayed() with args: ["88b4e3a5-1205-47bd-a63f-836b1950244a","c3975306-3240-49c3-b0eb-e608561a06f9"]
+[debug] [35m[JSONWP Proxy][39m Matched '/element/88b4e3a5-1205-47bd-a63f-836b1950244a/attribute/displayed' to command name 'getAttribute'
+[debug] [35m[JSONWP Proxy][39m Proxying [GET /element/88b4e3a5-1205-47bd-a63f-836b1950244a/attribute/displayed] to [GET http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7/element/88b4e3a5-1205-47bd-a63f-836b1950244a/attribute/displayed] with body: {}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: "{\"sessionId\":\"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7\",\"status\":0,\"value\":\"true\"}"
+[debug] [35m[MJSONWP][39m Responding to client with driver.elementDisplayed() result: true
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/element/88b4e3a5-1205-47bd-a63f-836b1950244a/displayed [39m[32m200[39m [90m20 ms - 76[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/elements[39m
+[35m[HTTP][39m [90m{"using":"id","sessionId":"c3975306-3240-49c3-b0eb-e608561a06f9","value":"com.google.android.apps.messaging:id/recipient_text_view"}[39m
+[debug] [35m[MJSONWP][39m Calling AppiumDriver.findElements() with args: ["id","com.google.android.apps.messaging:id/recipient_text_view","c3975306-3240-49c3-b0eb-e608561a06f9"]
+[debug] [35m[BaseDriver][39m Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [35m[BaseDriver][39m Waiting up to 0 ms for condition
+[debug] [35m[JSONWP Proxy][39m Matched '/elements' to command name 'findElements'
+[debug] [35m[JSONWP Proxy][39m Proxying [POST /elements] to [POST http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7/elements] with body: {"strategy":"id","selector":"com.google.android.apps.messaging:id/recipient_text_view","context":"","multiple":true}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: {"sessionId":"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7","status":0,"value":[{"ELEMENT":"d196b130-e1a0-4a98-af26-b0c6c381b2d2"}]}
+[debug] [35m[MJSONWP][39m Responding to client with driver.findElements() result: [{"ELEMENT":"d196b130-e1a0-4a98-af26-b0c6c381b2d2"}]
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/elements [39m[32m200[39m [90m23 ms - 124[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/element/d196b130-e1a0-4a98-af26-b0c6c381b2d2/click[39m
+[35m[HTTP][39m [90m{"sessionId":"c3975306-3240-49c3-b0eb-e608561a06f9","id":"d196b130-e1a0-4a98-af26-b0c6c381b2d2"}[39m
+[debug] [35m[MJSONWP][39m Calling AppiumDriver.click() with args: ["d196b130-e1a0-4a98-af26-b0c6c381b2d2","c3975306-3240-49c3-b0eb-e608561a06f9"]
+[debug] [35m[JSONWP Proxy][39m Matched '/element/d196b130-e1a0-4a98-af26-b0c6c381b2d2/click' to command name 'click'
+[debug] [35m[JSONWP Proxy][39m Proxying [POST /element/d196b130-e1a0-4a98-af26-b0c6c381b2d2/click] to [POST http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7/element/d196b130-e1a0-4a98-af26-b0c6c381b2d2/click] with body: {"element":"d196b130-e1a0-4a98-af26-b0c6c381b2d2"}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: {"sessionId":"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7","status":0,"value":true}
+[debug] [35m[MJSONWP][39m Responding to client with driver.click() result: true
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/element/d196b130-e1a0-4a98-af26-b0c6c381b2d2/click [39m[32m200[39m [90m39 ms - 76[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/elements[39m
+[35m[HTTP][39m [90m{"using":"id","sessionId":"c3975306-3240-49c3-b0eb-e608561a06f9","value":"com.google.android.apps.messaging:id/recipient_text_view"}[39m
+[debug] [35m[MJSONWP][39m Calling AppiumDriver.findElements() with args: ["id","com.google.android.apps.messaging:id/recipient_text_view","c3975306-3240-49c3-b0eb-e608561a06f9"]
+[debug] [35m[BaseDriver][39m Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [35m[BaseDriver][39m Waiting up to 0 ms for condition
+[debug] [35m[JSONWP Proxy][39m Matched '/elements' to command name 'findElements'
+[debug] [35m[JSONWP Proxy][39m Proxying [POST /elements] to [POST http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7/elements] with body: {"strategy":"id","selector":"com.google.android.apps.messaging:id/recipient_text_view","context":"","multiple":true}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: {"sessionId":"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7","status":0,"value":[{"ELEMENT":"23797c87-947d-4158-8994-160c752edeec"}]}
+[debug] [35m[MJSONWP][39m Responding to client with driver.findElements() result: [{"ELEMENT":"23797c87-947d-4158-8994-160c752edeec"}]
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/elements [39m[32m200[39m [90m512 ms - 124[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/element/23797c87-947d-4158-8994-160c752edeec/value[39m
+[35m[HTTP][39m [90m{"text":"5555215556","sessionId":"c3975306-3240-49c3-b0eb-e608561a06f9","id":"23797c87-947d-4158-8994-160c752edeec","value":["5","5","5","5","2","1","5","5","5","6"]}[39m
+[debug] [35m[MJSONWP][39m Calling AppiumDriver.setValue() with args: [["5","5","5","5","2","1","5","5","5","6"],"23797c87-947d-4158-8994-160c752edeec","c3975306-3240-49c3-b0eb-e608561a06f9"]
+[debug] [35m[JSONWP Proxy][39m Matched '/element/23797c87-947d-4158-8994-160c752edeec/value' to command name 'setValue'
+[debug] [35m[JSONWP Proxy][39m Proxying [POST /element/23797c87-947d-4158-8994-160c752edeec/value] to [POST http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7/element/23797c87-947d-4158-8994-160c752edeec/value] with body: {"elementId":"23797c87-947d-4158-8994-160c752edeec","text":"5555215556","replace":false}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: {"sessionId":"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7","status":0,"value":""}
+[debug] [35m[MJSONWP][39m Responding to client with driver.setValue() result: ""
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/element/23797c87-947d-4158-8994-160c752edeec/value [39m[32m200[39m [90m623 ms - 74[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/appium/device/press_keycode[39m
+[35m[HTTP][39m [90m{"sessionId":"c3975306-3240-49c3-b0eb-e608561a06f9","keycode":"66"}[39m
+[debug] [35m[MJSONWP][39m Calling AppiumDriver.pressKeyCode() with args: ["66",null,null,"c3975306-3240-49c3-b0eb-e608561a06f9",null,"c3975306-3240-49c3-b0eb-e608561a06f9"]
+[debug] [35m[JSONWP Proxy][39m Matched '/appium/device/press_keycode' to command name 'pressKeyCode'
+[debug] [35m[JSONWP Proxy][39m Proxying [POST /appium/device/press_keycode] to [POST http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7/appium/device/press_keycode] with body: {"keycode":"66","metastate":null,"flags":null}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: {"sessionId":"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7","status":0,"value":true}
+[debug] [35m[MJSONWP][39m Responding to client with driver.pressKeyCode() result: true
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/appium/device/press_keycode [39m[32m200[39m [90m676 ms - 76[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/elements[39m
+[35m[HTTP][39m [90m{"using":"id","sessionId":"c3975306-3240-49c3-b0eb-e608561a06f9","value":"com.google.android.apps.messaging:id/conversation_and_compose_container"}[39m
+[debug] [35m[MJSONWP][39m Calling AppiumDriver.findElements() with args: ["id","com.google.android.apps.messaging:id/conversation_and_compose_container","c3975306-3240-49c3-b0eb-e608561a06f9"]
+[debug] [35m[BaseDriver][39m Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [35m[BaseDriver][39m Waiting up to 0 ms for condition
+[debug] [35m[JSONWP Proxy][39m Matched '/elements' to command name 'findElements'
+[debug] [35m[JSONWP Proxy][39m Proxying [POST /elements] to [POST http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7/elements] with body: {"strategy":"id","selector":"com.google.android.apps.messaging:id/conversation_and_compose_container","context":"","multiple":true}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: {"sessionId":"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7","status":0,"value":[{"ELEMENT":"aadd305d-fc60-4ca5-8ea1-298eca4e8f49"}]}
+[debug] [35m[MJSONWP][39m Responding to client with driver.findElements() result: [{"ELEMENT":"aadd305d-fc60-4ca5-8ea1-298eca4e8f49"}]
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/elements [39m[32m200[39m [90m1618 ms - 124[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/element/aadd305d-fc60-4ca5-8ea1-298eca4e8f49/displayed[39m
+[35m[HTTP][39m [90m{}[39m
+[debug] [35m[MJSONWP][39m Calling AppiumDriver.elementDisplayed() with args: ["aadd305d-fc60-4ca5-8ea1-298eca4e8f49","c3975306-3240-49c3-b0eb-e608561a06f9"]
+[debug] [35m[JSONWP Proxy][39m Matched '/element/aadd305d-fc60-4ca5-8ea1-298eca4e8f49/attribute/displayed' to command name 'getAttribute'
+[debug] [35m[JSONWP Proxy][39m Proxying [GET /element/aadd305d-fc60-4ca5-8ea1-298eca4e8f49/attribute/displayed] to [GET http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7/element/aadd305d-fc60-4ca5-8ea1-298eca4e8f49/attribute/displayed] with body: {}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: "{\"sessionId\":\"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7\",\"status\":0,\"value\":\"true\"}"
+[debug] [35m[MJSONWP][39m Responding to client with driver.elementDisplayed() result: true
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/element/aadd305d-fc60-4ca5-8ea1-298eca4e8f49/displayed [39m[32m200[39m [90m21 ms - 76[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/elements[39m
+[35m[HTTP][39m [90m{"using":"id","sessionId":"c3975306-3240-49c3-b0eb-e608561a06f9","value":"com.google.android.apps.messaging:id/compose_message_text"}[39m
+[debug] [35m[MJSONWP][39m Calling AppiumDriver.findElements() with args: ["id","com.google.android.apps.messaging:id/compose_message_text","c3975306-3240-49c3-b0eb-e608561a06f9"]
+[debug] [35m[BaseDriver][39m Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [35m[BaseDriver][39m Waiting up to 0 ms for condition
+[debug] [35m[JSONWP Proxy][39m Matched '/elements' to command name 'findElements'
+[debug] [35m[JSONWP Proxy][39m Proxying [POST /elements] to [POST http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7/elements] with body: {"strategy":"id","selector":"com.google.android.apps.messaging:id/compose_message_text","context":"","multiple":true}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: {"sessionId":"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7","status":0,"value":[{"ELEMENT":"fa06f330-f0f0-48a4-a341-8285b3fdf02e"}]}
+[debug] [35m[MJSONWP][39m Responding to client with driver.findElements() result: [{"ELEMENT":"fa06f330-f0f0-48a4-a341-8285b3fdf02e"}]
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/elements [39m[32m200[39m [90m61 ms - 124[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/element/fa06f330-f0f0-48a4-a341-8285b3fdf02e/click[39m
+[35m[HTTP][39m [90m{"sessionId":"c3975306-3240-49c3-b0eb-e608561a06f9","id":"fa06f330-f0f0-48a4-a341-8285b3fdf02e"}[39m
+[debug] [35m[MJSONWP][39m Calling AppiumDriver.click() with args: ["fa06f330-f0f0-48a4-a341-8285b3fdf02e","c3975306-3240-49c3-b0eb-e608561a06f9"]
+[debug] [35m[JSONWP Proxy][39m Matched '/element/fa06f330-f0f0-48a4-a341-8285b3fdf02e/click' to command name 'click'
+[debug] [35m[JSONWP Proxy][39m Proxying [POST /element/fa06f330-f0f0-48a4-a341-8285b3fdf02e/click] to [POST http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7/element/fa06f330-f0f0-48a4-a341-8285b3fdf02e/click] with body: {"element":"fa06f330-f0f0-48a4-a341-8285b3fdf02e"}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: {"sessionId":"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7","status":0,"value":true}
+[debug] [35m[MJSONWP][39m Responding to client with driver.click() result: true
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/element/fa06f330-f0f0-48a4-a341-8285b3fdf02e/click [39m[32m200[39m [90m68 ms - 76[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/elements[39m
+[35m[HTTP][39m [90m{"using":"id","sessionId":"c3975306-3240-49c3-b0eb-e608561a06f9","value":"com.google.android.apps.messaging:id/compose_message_text"}[39m
+[debug] [35m[MJSONWP][39m Calling AppiumDriver.findElements() with args: ["id","com.google.android.apps.messaging:id/compose_message_text","c3975306-3240-49c3-b0eb-e608561a06f9"]
+[debug] [35m[BaseDriver][39m Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [35m[BaseDriver][39m Waiting up to 0 ms for condition
+[debug] [35m[JSONWP Proxy][39m Matched '/elements' to command name 'findElements'
+[debug] [35m[JSONWP Proxy][39m Proxying [POST /elements] to [POST http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7/elements] with body: {"strategy":"id","selector":"com.google.android.apps.messaging:id/compose_message_text","context":"","multiple":true}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: {"sessionId":"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7","status":0,"value":[{"ELEMENT":"a2d5334d-4ae4-4c6f-a35e-04ecad41e3ac"}]}
+[debug] [35m[MJSONWP][39m Responding to client with driver.findElements() result: [{"ELEMENT":"a2d5334d-4ae4-4c6f-a35e-04ecad41e3ac"}]
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/elements [39m[32m200[39m [90m966 ms - 124[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/element/a2d5334d-4ae4-4c6f-a35e-04ecad41e3ac/value[39m
+[35m[HTTP][39m [90m{"text":"Hello buddy","sessionId":"c3975306-3240-49c3-b0eb-e608561a06f9","id":"a2d5334d-4ae4-4c6f-a35e-04ecad41e3ac","value":["H","e","l","l","o"," ","b","u","d","d","y"]}[39m
+[debug] [35m[MJSONWP][39m Calling AppiumDriver.setValue() with args: [["H","e","l","l","o"," ","b","u","d","d","y"],"a2d5334d-4ae4-4c6f-a35e-04ecad41e3ac","c3975306-3240-49c3-b0eb-e608561a06f9"]
+[debug] [35m[JSONWP Proxy][39m Matched '/element/a2d5334d-4ae4-4c6f-a35e-04ecad41e3ac/value' to command name 'setValue'
+[debug] [35m[JSONWP Proxy][39m Proxying [POST /element/a2d5334d-4ae4-4c6f-a35e-04ecad41e3ac/value] to [POST http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7/element/a2d5334d-4ae4-4c6f-a35e-04ecad41e3ac/value] with body: {"elementId":"a2d5334d-4ae4-4c6f-a35e-04ecad41e3ac","text":"Hello buddy","replace":false}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: {"sessionId":"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7","status":0,"value":""}
+[debug] [35m[MJSONWP][39m Responding to client with driver.setValue() result: ""
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/element/a2d5334d-4ae4-4c6f-a35e-04ecad41e3ac/value [39m[32m200[39m [90m941 ms - 74[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/elements[39m
+[35m[HTTP][39m [90m{"using":"xpath","sessionId":"c3975306-3240-49c3-b0eb-e608561a06f9","value":"//android.widget.ImageView[contains(@resource-id, \"send\")]"}[39m
+[debug] [35m[MJSONWP][39m Calling AppiumDriver.findElements() with args: ["xpath","//android.widget.ImageView[contains(@resource-id, \"send\")]","c3975306-3240-49c3-b0eb-e608561a06f9"]
+[debug] [35m[BaseDriver][39m Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [35m[BaseDriver][39m Waiting up to 0 ms for condition
+[debug] [35m[JSONWP Proxy][39m Matched '/elements' to command name 'findElements'
+[debug] [35m[JSONWP Proxy][39m Proxying [POST /elements] to [POST http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7/elements] with body: {"strategy":"xpath","selector":"//android.widget.ImageView[contains(@resource-id, \"send\")]","context":"","multiple":true}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: {"sessionId":"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7","status":0,"value":[{"ELEMENT":"a0b3a13d-27da-4594-8e76-6037fac543a8"}]}
+[debug] [35m[MJSONWP][39m Responding to client with driver.findElements() result: [{"ELEMENT":"a0b3a13d-27da-4594-8e76-6037fac543a8"}]
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/elements [39m[32m200[39m [90m903 ms - 124[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/element/a0b3a13d-27da-4594-8e76-6037fac543a8/click[39m
+[35m[HTTP][39m [90m{"sessionId":"c3975306-3240-49c3-b0eb-e608561a06f9","id":"a0b3a13d-27da-4594-8e76-6037fac543a8"}[39m
+[debug] [35m[MJSONWP][39m Calling AppiumDriver.click() with args: ["a0b3a13d-27da-4594-8e76-6037fac543a8","c3975306-3240-49c3-b0eb-e608561a06f9"]
+[debug] [35m[JSONWP Proxy][39m Matched '/element/a0b3a13d-27da-4594-8e76-6037fac543a8/click' to command name 'click'
+[debug] [35m[JSONWP Proxy][39m Proxying [POST /element/a0b3a13d-27da-4594-8e76-6037fac543a8/click] to [POST http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7/element/a0b3a13d-27da-4594-8e76-6037fac543a8/click] with body: {"element":"a0b3a13d-27da-4594-8e76-6037fac543a8"}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: {"sessionId":"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7","status":0,"value":true}
+[debug] [35m[MJSONWP][39m Responding to client with driver.click() result: true
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/element/a0b3a13d-27da-4594-8e76-6037fac543a8/click [39m[32m200[39m [90m30 ms - 76[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/elements[39m
+[35m[HTTP][39m [90m{"using":"xpath","sessionId":"c3975306-3240-49c3-b0eb-e608561a06f9","value":"//android.widget.TextView[@text=\"Hello there. how r u?\"]"}[39m
+[debug] [35m[MJSONWP][39m Calling AppiumDriver.findElements() with args: ["xpath","//android.widget.TextView[@text=\"Hello there. how r u?\"]","c3975306-3240-49c3-b0eb-e608561a06f9"]
+[debug] [35m[BaseDriver][39m Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [35m[BaseDriver][39m Waiting up to 0 ms for condition
+[debug] [35m[JSONWP Proxy][39m Matched '/elements' to command name 'findElements'
+[debug] [35m[JSONWP Proxy][39m Proxying [POST /elements] to [POST http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7/elements] with body: {"strategy":"xpath","selector":"//android.widget.TextView[@text=\"Hello there. how r u?\"]","context":"","multiple":true}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: {"sessionId":"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7","status":0,"value":[{"ELEMENT":"4cc36176-d226-4616-afe1-623b96b5424c"}]}
+[debug] [35m[MJSONWP][39m Responding to client with driver.findElements() result: [{"ELEMENT":"4cc36176-d226-4616-afe1-623b96b5424c"}]
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/elements [39m[32m200[39m [90m76 ms - 124[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/element/4cc36176-d226-4616-afe1-623b96b5424c/displayed[39m
+[35m[HTTP][39m [90m{}[39m
+[debug] [35m[MJSONWP][39m Calling AppiumDriver.elementDisplayed() with args: ["4cc36176-d226-4616-afe1-623b96b5424c","c3975306-3240-49c3-b0eb-e608561a06f9"]
+[debug] [35m[JSONWP Proxy][39m Matched '/element/4cc36176-d226-4616-afe1-623b96b5424c/attribute/displayed' to command name 'getAttribute'
+[debug] [35m[JSONWP Proxy][39m Proxying [GET /element/4cc36176-d226-4616-afe1-623b96b5424c/attribute/displayed] to [GET http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7/element/4cc36176-d226-4616-afe1-623b96b5424c/attribute/displayed] with body: {}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: "{\"sessionId\":\"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7\",\"status\":0,\"value\":\"true\"}"
+[debug] [35m[MJSONWP][39m Responding to client with driver.elementDisplayed() result: true
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/element/4cc36176-d226-4616-afe1-623b96b5424c/displayed [39m[32m200[39m [90m30 ms - 76[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/elements[39m
+[35m[HTTP][39m [90m{"using":"xpath","sessionId":"c3975306-3240-49c3-b0eb-e608561a06f9","value":"//android.widget.ImageView[@content-desc=\"More options\"]"}[39m
+[debug] [35m[MJSONWP][39m Calling AppiumDriver.findElements() with args: ["xpath","//android.widget.ImageView[@content-desc=\"More options\"]","c3975306-3240-49c3-b0eb-e608561a06f9"]
+[debug] [35m[BaseDriver][39m Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [35m[BaseDriver][39m Waiting up to 0 ms for condition
+[debug] [35m[JSONWP Proxy][39m Matched '/elements' to command name 'findElements'
+[debug] [35m[JSONWP Proxy][39m Proxying [POST /elements] to [POST http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7/elements] with body: {"strategy":"xpath","selector":"//android.widget.ImageView[@content-desc=\"More options\"]","context":"","multiple":true}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: {"sessionId":"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7","status":0,"value":[{"ELEMENT":"d7fd7690-2e89-455d-855c-6dc17ebaf37f"}]}
+[debug] [35m[MJSONWP][39m Responding to client with driver.findElements() result: [{"ELEMENT":"d7fd7690-2e89-455d-855c-6dc17ebaf37f"}]
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/elements [39m[32m200[39m [90m62 ms - 124[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/element/d7fd7690-2e89-455d-855c-6dc17ebaf37f/click[39m
+[35m[HTTP][39m [90m{"sessionId":"c3975306-3240-49c3-b0eb-e608561a06f9","id":"d7fd7690-2e89-455d-855c-6dc17ebaf37f"}[39m
+[debug] [35m[MJSONWP][39m Calling AppiumDriver.click() with args: ["d7fd7690-2e89-455d-855c-6dc17ebaf37f","c3975306-3240-49c3-b0eb-e608561a06f9"]
+[debug] [35m[JSONWP Proxy][39m Matched '/element/d7fd7690-2e89-455d-855c-6dc17ebaf37f/click' to command name 'click'
+[debug] [35m[JSONWP Proxy][39m Proxying [POST /element/d7fd7690-2e89-455d-855c-6dc17ebaf37f/click] to [POST http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7/element/d7fd7690-2e89-455d-855c-6dc17ebaf37f/click] with body: {"element":"d7fd7690-2e89-455d-855c-6dc17ebaf37f"}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: {"sessionId":"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7","status":0,"value":true}
+[debug] [35m[MJSONWP][39m Responding to client with driver.click() result: true
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/element/d7fd7690-2e89-455d-855c-6dc17ebaf37f/click [39m[32m200[39m [90m70 ms - 76[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/elements[39m
+[35m[HTTP][39m [90m{"using":"xpath","sessionId":"c3975306-3240-49c3-b0eb-e608561a06f9","value":"//android.widget.TextView[@text=\"Delete\"]"}[39m
+[debug] [35m[MJSONWP][39m Calling AppiumDriver.findElements() with args: ["xpath","//android.widget.TextView[@text=\"Delete\"]","c3975306-3240-49c3-b0eb-e608561a06f9"]
+[debug] [35m[BaseDriver][39m Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [35m[BaseDriver][39m Waiting up to 0 ms for condition
+[debug] [35m[JSONWP Proxy][39m Matched '/elements' to command name 'findElements'
+[debug] [35m[JSONWP Proxy][39m Proxying [POST /elements] to [POST http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7/elements] with body: {"strategy":"xpath","selector":"//android.widget.TextView[@text=\"Delete\"]","context":"","multiple":true}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: {"sessionId":"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7","status":0,"value":[{"ELEMENT":"5cfdc553-dad1-4e95-95b1-d5266464f722"}]}
+[debug] [35m[MJSONWP][39m Responding to client with driver.findElements() result: [{"ELEMENT":"5cfdc553-dad1-4e95-95b1-d5266464f722"}]
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/elements [39m[32m200[39m [90m189 ms - 124[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/element/5cfdc553-dad1-4e95-95b1-d5266464f722/click[39m
+[35m[HTTP][39m [90m{"sessionId":"c3975306-3240-49c3-b0eb-e608561a06f9","id":"5cfdc553-dad1-4e95-95b1-d5266464f722"}[39m
+[debug] [35m[MJSONWP][39m Calling AppiumDriver.click() with args: ["5cfdc553-dad1-4e95-95b1-d5266464f722","c3975306-3240-49c3-b0eb-e608561a06f9"]
+[debug] [35m[JSONWP Proxy][39m Matched '/element/5cfdc553-dad1-4e95-95b1-d5266464f722/click' to command name 'click'
+[debug] [35m[JSONWP Proxy][39m Proxying [POST /element/5cfdc553-dad1-4e95-95b1-d5266464f722/click] to [POST http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7/element/5cfdc553-dad1-4e95-95b1-d5266464f722/click] with body: {"element":"5cfdc553-dad1-4e95-95b1-d5266464f722"}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: {"sessionId":"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7","status":0,"value":true}
+[debug] [35m[MJSONWP][39m Responding to client with driver.click() result: true
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/element/5cfdc553-dad1-4e95-95b1-d5266464f722/click [39m[32m200[39m [90m814 ms - 76[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/elements[39m
+[35m[HTTP][39m [90m{"using":"xpath","sessionId":"c3975306-3240-49c3-b0eb-e608561a06f9","value":"//android.widget.Button[@text=\"DELETE\"]"}[39m
+[debug] [35m[MJSONWP][39m Calling AppiumDriver.findElements() with args: ["xpath","//android.widget.Button[@text=\"DELETE\"]","c3975306-3240-49c3-b0eb-e608561a06f9"]
+[debug] [35m[BaseDriver][39m Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [35m[BaseDriver][39m Waiting up to 0 ms for condition
+[debug] [35m[JSONWP Proxy][39m Matched '/elements' to command name 'findElements'
+[debug] [35m[JSONWP Proxy][39m Proxying [POST /elements] to [POST http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7/elements] with body: {"strategy":"xpath","selector":"//android.widget.Button[@text=\"DELETE\"]","context":"","multiple":true}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: {"sessionId":"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7","status":0,"value":[{"ELEMENT":"4b3dacb1-be57-4cf7-8fe9-d888d05dae71"}]}
+[debug] [35m[MJSONWP][39m Responding to client with driver.findElements() result: [{"ELEMENT":"4b3dacb1-be57-4cf7-8fe9-d888d05dae71"}]
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/elements [39m[32m200[39m [90m74 ms - 124[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/element/4b3dacb1-be57-4cf7-8fe9-d888d05dae71/click[39m
+[35m[HTTP][39m [90m{"sessionId":"c3975306-3240-49c3-b0eb-e608561a06f9","id":"4b3dacb1-be57-4cf7-8fe9-d888d05dae71"}[39m
+[debug] [35m[MJSONWP][39m Calling AppiumDriver.click() with args: ["4b3dacb1-be57-4cf7-8fe9-d888d05dae71","c3975306-3240-49c3-b0eb-e608561a06f9"]
+[debug] [35m[JSONWP Proxy][39m Matched '/element/4b3dacb1-be57-4cf7-8fe9-d888d05dae71/click' to command name 'click'
+[debug] [35m[JSONWP Proxy][39m Proxying [POST /element/4b3dacb1-be57-4cf7-8fe9-d888d05dae71/click] to [POST http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7/element/4b3dacb1-be57-4cf7-8fe9-d888d05dae71/click] with body: {"element":"4b3dacb1-be57-4cf7-8fe9-d888d05dae71"}
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: {"sessionId":"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7","status":0,"value":true}
+[debug] [35m[MJSONWP][39m Responding to client with driver.click() result: true
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9/element/4b3dacb1-be57-4cf7-8fe9-d888d05dae71/click [39m[32m200[39m [90m75 ms - 76[39m
+[35m[HTTP][39m [90m[39m
+[35m[HTTP][39m [37m-->[39m [37mDELETE[39m [37m/wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9[39m
+[35m[HTTP][39m [90m{}[39m
+[debug] [35m[MJSONWP][39m Calling AppiumDriver.deleteSession() with args: ["c3975306-3240-49c3-b0eb-e608561a06f9"]
+[debug] [35m[BaseDriver][39m Event 'quitSessionRequested' logged at 1542446185841 (16:16:25 GMT+0700 (SE Asia Standard Time))
+[35m[Appium][39m Removing session c3975306-3240-49c3-b0eb-e608561a06f9 from our master session list
+[debug] [35m[UiAutomator2][39m Deleting UiAutomator2 session
+[debug] [35m[UiAutomator2][39m Deleting UiAutomator2 server session
+[debug] [35m[JSONWP Proxy][39m Matched '/' to command name 'deleteSession'
+[debug] [35m[JSONWP Proxy][39m Proxying [DELETE /] to [DELETE http://localhost:8200/wd/hub/session/80d2375e-0b1a-4bc3-bd25-8d938f8e35d7] with no body
+[debug] [35m[JSONWP Proxy][39m Got response with status 200: "{\"sessionId\":\"80d2375e-0b1a-4bc3-bd25-8d938f8e35d7\",\"status\":0,\"value\":\"Session deleted\"}"
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 shell am force-stop com.google.android.apps.messaging'
+[debug] [35m[Logcat][39m Stopping logcat capture
+[debug] [35m[ADB][39m Removing forwarded port socket connection: 8200 
+[debug] [35m[ADB][39m Running 'C:\Users\longnhu\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 -s emulator-5554 forward --remove tcp\:8200'
+[debug] [35m[BaseDriver][39m Event 'quitSessionFinished' logged at 1542446186724 (16:16:26 GMT+0700 (SE Asia Standard Time))
+[debug] [35m[MJSONWP][39m Received response: null
+[debug] [35m[MJSONWP][39m But deleting session, so not returning
+[debug] [35m[MJSONWP][39m Responding to client with driver.deleteSession() result: null
+[35m[HTTP][39m [37m<-- DELETE /wd/hub/session/c3975306-3240-49c3-b0eb-e608561a06f9 [39m[32m200[39m [90m885 ms - 76[39m
+[35m[HTTP][39m [90m[39m
+[debug] [35m[UiAutomator2][39m [UIAutomator2] io.appium.uiautomator2.server.test.AppiumUiAutomator2Server:.
+[debug] [35m[UiAutomator2][39m [UIAutomator2] Time: 61.206
+[debug] [35m[UiAutomator2][39m [UIAutomator2] OK (1 test)
+Terminate batch job (Y/N)? 

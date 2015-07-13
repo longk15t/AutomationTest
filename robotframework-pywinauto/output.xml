@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20181114 15:05:09.569" generator="Robot 3.0.4 (Python 2.7.11 on win32)">
+<suite source="D:\AutomationTest\robotframework-pywinauto\FirstTestSuite.robot" id="s1" name="FirstTestSuite">
+<test id="s1-t1" name="Check version of Notepad">
+<kw type="setup" name="Open Notepad app" library="resource">
+<kw name="Open App" library="PageObject.Notepad">
+<status status="PASS" endtime="20181114 15:05:10.050" starttime="20181114 15:05:09.972"></status>
+</kw>
+<status status="PASS" endtime="20181114 15:05:10.050" starttime="20181114 15:05:09.971"></status>
+</kw>
+<kw name="Given user type &quot;Hello world&quot; to notepad" library="resource">
+<kw name="Type In Notepad" library="PageObject.Notepad">
+<arguments>
+<arg>${input}</arg>
+</arguments>
+<status status="PASS" endtime="20181114 15:05:10.166" starttime="20181114 15:05:10.050"></status>
+</kw>
+<status status="PASS" endtime="20181114 15:05:10.166" starttime="20181114 15:05:10.050"></status>
+</kw>
+<kw name="When user click menu Help then About to check the version" library="resource">
+<kw name="Open About Dialog" library="PageObject.Notepad">
+<status status="PASS" endtime="20181114 15:05:10.488" starttime="20181114 15:05:10.166"></status>
+</kw>
+<status status="PASS" endtime="20181114 15:05:10.488" starttime="20181114 15:05:10.166"></status>
+</kw>
+<kw name="Then notepad version should be 1709" library="resource">
+<kw name="Check Notepad version is" library="PageObject.Notepad">
+<arguments>
+<arg>${ver}</arg>
+</arguments>
+<status status="PASS" endtime="20181114 15:05:10.851" starttime="20181114 15:05:10.488"></status>
+</kw>
+<status status="PASS" endtime="20181114 15:05:10.851" starttime="20181114 15:05:10.488"></status>
+</kw>
+<kw type="teardown" name="Close Notepad app" library="resource">
+<kw name="Close App" library="PageObject.Notepad">
+<status status="PASS" endtime="20181114 15:05:11.220" starttime="20181114 15:05:10.851"></status>
+</kw>
+<kw name="Delete file" library="PageObject.Notepad">
+<status status="PASS" endtime="20181114 15:05:11.220" starttime="20181114 15:05:11.220"></status>
+</kw>
+<status status="PASS" endtime="20181114 15:05:11.220" starttime="20181114 15:05:10.851"></status>
+</kw>
+<status status="PASS" endtime="20181114 15:05:11.220" critical="yes" starttime="20181114 15:05:09.971"></status>
+</test>
+<doc>This script automate Windows desktop app (Notepad)</doc>
+<status status="PASS" endtime="20181114 15:05:11.220" starttime="20181114 15:05:09.569"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="FirstTestSuite" pass="1">FirstTestSuite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

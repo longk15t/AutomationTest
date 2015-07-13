@@ -1,0 +1,2 @@
+HAX is working and emulator runs in fast virt mode.
+emulator: Saving state on exit with session uptime 68343 ms

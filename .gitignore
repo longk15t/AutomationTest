@@ -1,0 +1,13 @@
+.vscode
+java_selenium/target
+java_selenium/.settings
+java_selenium/screenshots
+robotframework-appiumlibrary/multiple_devices/*.txt
+serenity-webdrivermanager/target
+serenity-webdrivermanager/.project
+serenity-webdrivermanager/.settings
+robotframework-selenium2library/*.html
+robotframework-selenium2library/output.xml
+python_selenium_behave/*.log
+python_selenium_behave/reports
+python_selenium_behave/features/lib/__pycache__

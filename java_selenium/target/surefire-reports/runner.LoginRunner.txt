@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: runner.LoginRunner
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 24.499 sec <<< FAILURE!
+Then user see the home page(Scenario: Login valid)  Time elapsed: 0.006 sec  <<< FAILURE!
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at steps.LoginSteps.checkHomePageOpened(LoginSteps.java:55)
+	at ?.Then user see the home page(src/test/resources/testcases/Login.feature:15)
+
+Scenario: Login valid  Time elapsed: 0.007 sec  <<< FAILURE!
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at steps.LoginSteps.checkHomePageOpened(LoginSteps.java:55)
+	at ?.Then user see the home page(src/test/resources/testcases/Login.feature:15)
+
