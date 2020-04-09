@@ -11,3 +11,5 @@ robotframework-selenium2library/output.xml
 python_selenium_behave/*.log
 python_selenium_behave/reports
 python_selenium_behave/features/lib/__pycache__
+python_requests/__pycache__
+python_requests/.pytest_cache
