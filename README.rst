@@ -1,7 +1,7 @@
 .. _robotframework-appiumlibrary: ./robotframework-appiumlibrary
 .. _single-device: ./robotframework-appiumlibrary/single_device
 .. _multiple-devices: ./robotframework-appiumlibrary/multiple_devices
-.. _robotframework-selenium2library: ./robotframework-selenium2library
+.. _robotframework-seleniumlibrary: ./robotframework-seleniumlibrary
 .. _robotframework-pywinauto: ./robotframework-pywinauto
 .. _pytest_uiautomation: ./pytest_uiautomation
 .. _maven-selenium-cucumber: ./java_selenium
@@ -44,7 +44,7 @@ multiple-devices_
     - Run test cases
 - Youtube video link: https://www.youtube.com/watch?v=2-KjUGF_wYI
 
-robotframework-selenium2library_
+robotframework-seleniumlibrary_
 ============
 - Automate web
 - Script flow:

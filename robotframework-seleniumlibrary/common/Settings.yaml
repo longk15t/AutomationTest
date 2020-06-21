@@ -1,0 +1,31 @@
+#----------------DRIVER PATH----------------
+CHROME_DRIVER_PATH_WINS:       /Drivers/chromedriver.exe
+CHROME_DRIVER_PATH_UNIX:       /usr/local/bin/chromedriver
+
+#Browsers: Chrome/FireFox/IE
+BROWSER:  Chrome
+
+#----------------SET DEFAULT ENVIRONMENT----------------
+ENV: UAT
+
+#----------------SYSTEM ENVIRONMENT----------------
+ENVIRONMENT:
+  UAT:
+    LOGIN_URL: 
+    HOME_PAGE_URL: 
+    LOGOUT_URL: 
+
+  DEV:
+    LOGIN_URL: 
+    HOME_PAGE_URL:
+    LOGOUT_URL: 
+
+#----------------ACCOUNT LOGIN---------------
+ACCOUNTS:
+  UAT:
+    USERNAME_0:     
+    PASSWORD:       
+
+  DEV:
+    USERNAME_1:     
+    PASSWORD:       
