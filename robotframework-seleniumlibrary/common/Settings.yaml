@@ -3,20 +3,20 @@ CHROME_DRIVER_PATH_WINS:       /Drivers/chromedriver.exe
 CHROME_DRIVER_PATH_UNIX:       /usr/local/bin/chromedriver
 
 #Browsers: Chrome/FireFox/IE
-BROWSER:  Chrome
+#BROWSER:  Chrome
 
 #----------------SET DEFAULT ENVIRONMENT----------------
-ENV: UAT
+ENV: QA
 
 #----------------SYSTEM ENVIRONMENT----------------
 ENVIRONMENT:
-  UAT:
-    LOGIN_URL: 
+  QA:
+    BASE_URL: https://github.com/
     HOME_PAGE_URL: 
     LOGOUT_URL: 
 
   DEV:
-    LOGIN_URL: 
+    BASE_URL: https://github.com/
     HOME_PAGE_URL:
     LOGOUT_URL: 
 

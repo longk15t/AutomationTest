@@ -1,9 +1,7 @@
 *** Variables ***
-${THAI_LANGUAGE}        id=THe
-${ENG_LANGUAGE}         id=ENe
-${username_field}       id=userName
-${pwd_field}       id=password
-${login_btn}         id=loginBtn
-${ERROR_LOCATOR}        id=errorText
-${TO_KASIKORN_BUTTON}   id=toKasikorn
-${TO_LOGIN_BUTTON}      id=toLogin
+${signin_button}        xpath=//a[@href="/login"]
+${signin_form}          xpath=//form[@action="/session"]
+${username_field}       id:login_field
+${password_field}       id:password
+${submit_btn}           xpath://input[@type="submit"]
+${error_elem}           xpath://div[@class="flash flash-full flash-error "]

@@ -1,24 +1,27 @@
 *** Settings ***
-Resource          Login_Locators.robot
+Resource          login_locators.robot
 
 *** Keywords ***
-Choose Language For XX Web
-    [Documentation]    This keyword is used to choose language for XX website.
-    [Arguments]    ${language}
-    Wait Until Element Is Visible    ${language}
-    Click Element    ${language}
-    Verify Login Page Appears
+Verify login page appears
+    [Documentation]    This keyword is used to verify Login page appears
+    Wait Until Element Is Visible    ${username_field}
+    Wait Until Element Is Visible    ${password_field}
+    Wait Until Element Is Visible    ${submit_btn}
 
-Input Userame And Password
+Access to Sign in page
+    Sleep    5s
+    # Wait Until Element Is Visible    ${signin_button}
+    Click Element    ${signin_button}
+    Verify login page appears
+
+Input credentials
     [Arguments]    ${username}    ${password}
-    Input Text    ${USERNAME_FIELD}    ${username}
-    Input Password    ${PASSWORD_FIELD}    ${password}
+    Input Text    ${username_field}    ${username}
+    Input Password    ${password_field}    ${password}
 
-Click On Login Button
-    Wait Until Element Is Visible    ${LOGIN_BUTTON}
-    Set Focus To Element    ${LOGIN_BUTTON}
-    Click Button    ${LOGIN_BUTTON}
+Click Sign in button
+    Click Button    ${submit_btn}
 
-Click On Go To Login Page Button
-    Wait Until Element Is Visible    ${TO_LOGIN_BUTTON}
-    Click Element    ${TO_LOGIN_BUTTON}
+Verify error message display
+    Wait Until Element Is Visible    ${error_elem}
+    Page Should Contain Element    ${error_elem}
