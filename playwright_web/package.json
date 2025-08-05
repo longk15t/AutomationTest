@@ -1,0 +1,26 @@
+{
+  "name": "playwright_web",
+  "version": "1.0.0",
+  "description": "Playwright web automation project",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:chromium": "npx playwright test --project=chromium",
+    "test:firefox": "npx playwright test --project=firefox"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.53.1",
+    "@types/node": "^24.0.10",
+    "dotenv": "17.0.1"
+  },
+  "dependencies": {
+    "playwright-chromium": "^1.30.0",
+    "playwright-firefox": "^1.30.0"
+  },
+  "engines": {
+    "node": ">=22.11.0"
+  }
+}

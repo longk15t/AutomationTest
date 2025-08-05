@@ -13,3 +13,7 @@ python_selenium_behave/reports
 python_selenium_behave/features/lib/__pycache__
 python_requests/__pycache__
 python_requests/.pytest_cache
+playwright_web/.vscode
+playwright_web/node_modules
+playwright_web/playwright-report
+playwright_web/test-results
