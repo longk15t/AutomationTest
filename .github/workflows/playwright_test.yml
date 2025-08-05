@@ -1,0 +1,86 @@
+name: Playwright E2E Tests
+
+on:
+  workflow_dispatch:
+    inputs:
+      browser:
+        description: 'Browser to run tests on'
+        required: false
+        default: 'chromium'
+        type: choice
+        options:
+          - chromium
+          - firefox
+
+jobs:
+  run-e2e-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.11.0
+
+      - name: Install root dependencies only
+        run: pnpm install --workspace-root
+
+      - name: Install Playwright Browsers
+        run: pnpm exec playwright install --with-deps
+
+      - name: Run Playwright tests
+        working-directory: ./playwright_web
+        run: npm playwright test --project=${{ github.event.inputs.browser || 'chromium' }}
+
+      - name: Upload Playwright HTML report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright_web/playwright-report/
+
+      - name: Publish Test Report
+        uses: ctrf-io/github-test-reporter@v1
+        with:
+          report-path: 'playwright_web/test-results/results.xml'
+          integrations-config: |
+            {
+              "junit-to-ctrf": {
+                "enabled": true,
+                "action": "convert",
+                "options": {
+                  "output": "./ctrf/ctrf-report.json",
+                  "toolname": "junit-to-ctrf",
+                  "useSuiteName": false,
+                  "env": {
+                    "appName": "my-app"
+                  }
+                }
+              }
+            }
+          summary-report: true
+          github-report: true
+          test-report: false
+          test-list-report: false
+          failed-report: false
+          fail-rate-report: false
+          flaky-report: false
+          flaky-rate-report: false
+          failed-folded-report: false
+          previous-results-report: false
+          insights-report: false
+          slowest-report: false
+          ai-report: false
+          skipped-report: false
+          suite-folded-report: false
+          suite-list-report: false
+          file-report: false
+          pull-request-report: false
+          commit-report: false
+          custom-report: false
+          community-report: false
+          summary: false
+        if: always()
