@@ -1,4 +1,4 @@
-name: Playwright E2E Tests
+name: Playwright Web Automation Framework
 
 on:
   workflow_dispatch:
@@ -15,6 +15,8 @@ on:
 jobs:
   run-e2e-tests:
     runs-on: ubuntu-latest
+    env:
+      working-directory: ./playwright_web
 
     steps:
       - name: Checkout code
@@ -26,10 +28,10 @@ jobs:
           node-version: 22.11.0
 
       - name: Install root dependencies only
-        run: pnpm install --workspace-root
+        run: npm install --workspace-root
 
       - name: Install Playwright Browsers
-        run: pnpm exec playwright install --with-deps
+        run: npm exec playwright install --with-deps
 
       - name: Run Playwright tests
         working-directory: ./playwright_web
@@ -40,12 +42,12 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: playwright-report
-          path: playwright_web/playwright-report/
+          path: playwright-report/
 
       - name: Publish Test Report
         uses: ctrf-io/github-test-reporter@v1
         with:
-          report-path: 'playwright_web/test-results/results.xml'
+          report-path: 'test-results/results.xml'
           integrations-config: |
             {
               "junit-to-ctrf": {
