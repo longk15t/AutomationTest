@@ -35,7 +35,7 @@ jobs:
 
       - name: Run Playwright tests
         working-directory: ./playwright_web
-        run: npm playwright test --project=${{ github.event.inputs.browser || 'chromium' }}
+        run: npx playwright test --project=${{ github.event.inputs.browser || 'chromium' }}
 
       - name: Upload Playwright HTML report
         if: always()
