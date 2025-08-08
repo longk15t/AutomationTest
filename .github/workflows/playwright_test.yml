@@ -2,7 +2,7 @@ name: Playwright Web Automation Framework
 
 on:
   schedule:
-    - cron: '5 * * * *'
+    - cron: '*/10 * * * *'
   workflow_dispatch:
     inputs:
       browser:
@@ -98,7 +98,7 @@ jobs:
           custom-report: false
           community-report: false
           summary: false
-        if: ${{ inputs.show_report == true }}
+        if: ${{ github.event.inputs.show_report == 'true' || !github.event.inputs.show_report }}
 
   deploy:
     if: always()
