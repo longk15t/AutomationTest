@@ -1,6 +1,8 @@
 name: Playwright Web Automation Framework
 
 on:
+  schedule:
+    - cron: '5 * * * *'
   workflow_dispatch:
     inputs:
       browser:
@@ -11,6 +13,11 @@ on:
         options:
           - chromium
           - firefox
+      show_report:
+        description: 'Show report?'
+        required: false
+        default: true
+        type: boolean
 
 jobs:
   run-e2e-tests:
@@ -71,7 +78,7 @@ jobs:
             }
           summary-report: true
           github-report: true
-          test-report: false
+          test-report: true
           test-list-report: false
           failed-report: false
           fail-rate-report: false
@@ -91,7 +98,8 @@ jobs:
           custom-report: false
           community-report: false
           summary: false
-        if: always()
+        if: ${{ inputs.show_report == true }}
+
   deploy:
     if: always()
     needs: run-e2e-tests
