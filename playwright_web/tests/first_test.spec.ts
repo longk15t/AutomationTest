@@ -13,5 +13,5 @@ test('Check page title', async ({ page }) => {
 test('Check page url', async ({ page }) => {
     await page.goto('/');
     await page.waitForLoadState('domcontentloaded');
-    await expect(page).toHaveURL(/github.vn/, { timeout: 5000 });
+    await expect(page).toHaveURL(/https:\/\/github.vn/, { timeout: 5000 });
 });

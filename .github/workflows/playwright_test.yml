@@ -6,16 +6,11 @@ on:
       browser:
         description: 'Browser to run tests on'
         required: false
-        default: 'chromium'
+        default: 'chrome'
         type: choice
         options:
-          - chromium
+          - chrome
           - firefox
-      show_report:
-        description: 'Show report?'
-        required: false
-        default: true
-        type: boolean
 
 jobs:
   run-e2e-tests:
@@ -40,14 +35,14 @@ jobs:
 
       - name: Run Playwright tests
         working-directory: ./playwright_web
-        run: npx playwright test --project=${{ github.event.inputs.browser || 'chromium' }}
+        run: npx playwright test --project=${{ github.event.inputs.browser || 'chrome' }}
 
-      - name: Upload Playwright HTML report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-report
-          path: playwright_web/playwright-report
+      # - name: Upload Playwright HTML report
+      #   if: always()
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: playwright-report
+      #     path: playwright_web/playwright-report
       
       - name: Upload Playwright Report to Github Pages
         uses: actions/upload-pages-artifact@v3
@@ -59,7 +54,27 @@ jobs:
         uses: ctrf-io/github-test-reporter@v1
         with:
           report-path: 'playwright_web/ctrf/ctrf-report.json'
+          summary-report: true
           github-report: true
+          test-report: true
+          test-list-report: true
+          failed-report: true
+          fail-rate-report: true
+          flaky-report: true
+          flaky-rate-report: true
+          failed-folded-report: true
+          previous-results-report: true
+          insights-report: true
+          slowest-report: true
+          ai-report: true
+          skipped-report: true
+          suite-folded-report: true
+          suite-list-report: true
+          file-report: true
+          pull-request-report: true
+          commit-report: true
+          custom-report: true
+          community-report: true
         if: always()
 
   deploy:
