@@ -14,7 +14,8 @@
   "devDependencies": {
     "@playwright/test": "^1.53.1",
     "@types/node": "^24.0.10",
-    "dotenv": "17.0.1"
+    "dotenv": "17.0.1",
+    "playwright-ctrf-json-reporter": "^0.0.22"
   },
   "dependencies": {
     "playwright-chromium": "^1.30.0",
